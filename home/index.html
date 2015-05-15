@@ -1,10 +1,2614 @@
+
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<head>
+
+    <title>Obitopedia - Home</title>
+    <meta charset="utf-8">
+    <link href="../css/obitopedia.css" rel="stylesheet" media="screen">
+    <link href="../js/datepicker/datepicker.css" rel="stylesheet" media="screen">
+    <link href="css/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+    <link href="../css/profiles/profile-style.css" rel="stylesheet" media="screen">
+    <link rel="icon" type="image/png" href="../images/fav-ico.png" />
+    <script type='text/javascript' src="http://wurfl.io/wurfl.js"></script>
+    <script type="text/javascript">
+        var detection = JSON.stringify(WURFL);
+        //alert(detection);
+        //alert(WURFL.form_factor);
+
+        if(WURFL.is_mobile){
+            //dostuff();
+            if(WURFL.form_factor=="Tablet"){
+                //	alert("opend in tablet");
+            }else{
+//		window.location = "/mobileapp"
+            }
+        }
+    </script>
+    <style type="text/css">
+
+
+        .fileupload {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fileUpload input.upload {
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity =   0);
+        }
+
+        .txt-content {
+            border-radius: 4px;
+            height: 35px;
+            border: 1px solid #cccccc;
+            font-size: 13px;
+            color: #575757;
+            padding-left: 10px;
+        }
+
+        #psudo_preview:hover, #psudo_create:hover, #psudo_prof:hover {
+            background-color: rgba(55,135,195,1);
+        }
+        #psudo_preview:hout, #psudo_create:hout, #psudo_prof:hout {
+            background-color: rgba(49,151,199,1);
+        }
+
+    </style>
+    <link href="../js/datepicker/bootstrap-datepicker.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet" media="screen">
+
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/jquery/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="../js/jquery/jquery.accordion.js"></script>
+    <script type="text/javascript" src="../js/datepicker/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../js/jquery/jquery.form.js"></script>
+
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/login_pop.js"></script>
+    <script type="text/javascript" src="js/social_login.js"></script>
+    <script src="js/ckeditor.js"></script>
+    <script type="text/javascript" src="js/jquery.Jcrop.js"></script>
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha3.js"></script>
+    <script src="http://maps.google.com/maps/api/js?libraries=places&region=uk&language=en&sensor=true"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/header.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script>
+        $( document ).ready(function() {
+            checkSessionCookie();
+        });
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-61532697-1', 'auto');
+        ga('send', 'pageview');
+
+        window.onload = function () {
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "http://www.telize.com/jsonip?callback=DisplayIP";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        };
+        function DisplayIP(response) {
+            $("#ipaddress").val(response.ip);
+        }
+
+    </script>
 </head>
-<body>
-    <h1>This is h1</h1>
+<body class="bgImg">
+<div class="wrap">
+
+    <div class="inner-content">
+        <div style="position: absolute; background-color: rgba(255,255,255, 0.5); padding: 0 10px 0 0; min-height:100%;">
+            <!--div style="float: left; width: 85px; height: 100%; position: fixed;  background-color: #000; opacity: .4; margin-left: 10px;"-->
+            <div id="left-hand-menu">
+                <ul id="ul-m">
+                </ul>
+            </div>
+
+            <div style="float: left;" class="pl95">
+                <!-- Search panel-->
+                <div class="w760" id="searchbar">
+                </div>
+
+                <!-- Obitopedia random header images -->
+                <div style="margin-top: 75px;">
+                    <div id="header_img" style="background: url('') no-repeat; background-size: 100%; border-radius: 8px;" class="w760 h345">
+                    </div>
+                </div>
+                <!-- Creating memorial-->
+                <div style="padding-top: 10px;">
+                    <div class="accordion ft18 toUpper cl_blue broidnormal">
+                        <a class="create_btn">
+                            <div style="display: table-cell; width: 13px;"></div>
+                            <div id="r_arrow" class="create_dwn_btn"></div>
+                            <div style="display: table-cell; padding-top: 2px;" class="w682">Create Memorial</div>
+                            <div id="l_arrow" class="create_dwn_btn" style="width: 32px"></div>
+                        </a>
+                    </div>
+
+                    <div id="crt_mem" class="cl_grey broidnormal" style="background-color: rgba(255,255,255, 0.7); display: none;">
+                        <div style="padding: 25px 0 0 15px;">
+                            <div style="float:left;" class="w340">
+                                <div style="float: left; padding-top: 10px;" class="w50"> <label class="broidnormal toUpper ft13">Name<span class="cl_red"> *</span></label> </div>
+                                <div style="float: left;"> <input type="text" id="uname" value="" class="txt-content w260"><br><div id="uname_err" class="cl_red ft12" style="display:none;">Please fill in the details</div></div>
+                            </div>
+                            <div style="float:left;">
+                                <div style="float: left; padding-top: 10px;" class="dw120"> <label class="broidnormal toUpper ft13">Remembered as<span class="cl_red"> *</span></label> </div>
+                                <div style="float: left;"><input type="text" id="bfintro" value="" class="txt-content dw250" placeholder='A loving wife and mother' maxlength="36"><br><div id="bfintro_err" class="cl_red ft12" style="display:none;">Please fill in the details</div></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div style="float:left;" class="w320">
+                                <div class="pt10 flt w160"> <label class="broidnormal toUpper ft13">upload profile picture</label></div>
+                                <div style="clear: both;"></div>
+                                <div id="ppic" style="width: 100px; height: 100px; overflow: hidden; display: none; border-radius: 7px;"><img src=""></div>
+                                <img src="images/delete-button.png" style="position: absolute; margin-left: 83px; margin-top: -98px; display: none; background-color: rgba(255, 255, 255, 0.4); z-index: 999;" id="deleteProImg">
+                                <div class="fileUpload flt" style="margin-top: 10px;">
+                                    <form id="uploadpro_photo" enctype="multipart/form-data" action="/uploadpro_photo" method="post">
+                                        <a id="psudo_prof" class="psudo_btn w140"><label class="broidnormal toUpper ft12 pointer">Upload Photo</label></a>
+                                    </form>
+                                    <input type="file" id="profile_img" style="display: none;">
+                                </div>
+                            </div>
+                            <div style="float: left; display:none; width: 120px; padding: 10px 0 0 10px;" class="cl_label" id="prof_filename">No file chosen</div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div class="pt5"><label class="broidnormal toUpper ft13">customize memorial header</label> </div>
+                            <div><label class="broidnormal ft12">Select from the themes below</label></div>
+                            <div style="width: 730px; overflow: hidden;">
+                                <div class="pt4" style="margin: 0 auto; width: 1500px;" id="memorial_header_theme">
+                                </div>
+                            </div>
+                            <!-- <div style="width: 730px;" align="right">dfdfdfdfdf</div> -->
+                            <input type="hidden" id="memorial_filename" value="">
+                            <div class="cbth"></div>
+                            <div class="pt10">
+                                <div class="pb5"><label class="broidnormal ft12" id="">Upload from my collection</label></div>
+                                <div class="w155 h70 imgborder" style="display:none; background-color: #ffffff;">
+                                    <div id="phpic" style="width: 155px; height: 71px; overflow: hidden;"><img src=""></div>
+                                </div>
+                                <div class="cbth fileUpload pt5">
+                                    <form id="uploadheader_photo" enctype="multipart/form-data" action="/uploadpro_photo" method="post">
+                                        <a id="psudo_header" class="psudo_btn w135 p6"><label class="broidnormal toUpper ft12 pointer">Upload Photo</label></a>
+                                    </form>
+                                </div>
+                                <input type="file" id="profile_header_img" style="display: none;">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div style="float:left;" class="w340">
+                                <div style="float: left; padding-top: 10px;" class="w110"> <label class="broidnormal toUpper ft13">born on</label> </div>
+                                <div style="float: left;"><input type="text" id="dob" name="dob" value="" style="padding-left: 30px;" class="txt-content dates w175" data-date-format="dd-mm-yyyy" readonly="readonly"></div>
+                            </div>
+                            <div style="float:left;">
+                                <div style="float: left; padding-top: 10px;" class="dw120"> <label class="broidnormal toUpper ft13">died on</label> </div>
+                                <div style="float: left;"><input type="text" id="dod" name="dod" value="" style="padding-left: 30px;" class="txt-content dates w175" data-date-format="dd-mm-yyyy" readonly="readonly"></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding" id="aadlb" style="display:none;">
+                            <div>
+                                <div style="float: left; padding-top: 10px;" class="w110"> <label class="broidnormal toUpper ft13">age at death</label> </div>
+                                <div style="float: left;"><input type="text" id="aad" class="txt-content w200 txtTransparent cl_grey" style="outline: 0; border: 0" readonly="readonly" value=""></div>
+                                <div style="float: left; margin-top: 7px;"><label class="broidnormal ft11 cl_blue underline" style="cursor: pointer; display: none;" id="aad_hide">Hide</label></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div style="float:left;" class="w340">
+                                <div style="float: left; padding-top: 10px;" class="w110"> <label class="broidnormal toUpper ft13">place of birth</label> </div>
+                                <div style="float: left;"><input type="text" id="pob" class="txt-content w200"></div>
+                            </div>
+                            <div style="float:left;">
+                                <div style="float: left; padding-top: 10px;" class="dw120"> <label class="broidnormal toUpper ft13">place of death</label> </div>
+                                <div style="float: left;"><input type="text" id="pod" class="txt-content w200"></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div style="float:left;" class="w340">
+                                <div style="float: left; padding-top: 10px;" class="w110"> <label class="broidnormal toUpper ft13">profession</label> </div>
+                                <div style="float: left;"><input type="text" id="profession" class="txt-content w200" placeholder='Writer'></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div class="flt pt4 pb10"> <label class="broidnormal toUpper ft13">memorial text<span class="cl_red"> *</span></label></div>
+                            <div style="float: right; width: 178px; height: 37px;" id="relationship_typediv1" class="styled-select">
+                                <select style="height: 38px;" id="memorial_text_lang" class="broidnormal ft13" onchange="chooselang();">
+                                </select>
+                            </div>
+                            <div style="clear: both; margin-bottom: 5px;"></div>
+                            <textarea cols="80" id="editor1" name="editor1" rows="10" style="height: 200px"></textarea>
+                            <div id="memText_err" class="cl_red ft12 pt10 flt" style="display:none;">Please fill in the details</div>
+                            <div id="memText_err_1" class="cl_red ft12 pt10 flt" style="display:none;"></div>
+                            <span class="broidnormal cl_red frt ft12 pt10" style="display: none;"><span id="mem_char_left">3000</span> characters left</span>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div><label class="broidnormal toUpper ft13">Relationship<span class="cl_red"> *</span></label></div>
+                            <div class="w300" style="float:left; padding-top: 15px; padding-left: 130px;">
+                                <div style="float: left;">
+                                    <div style="background: url('../images/co-curator.png') no-repeat; width: 83px; height: 83px;">
+                                        <div style="padding-top: 1px;"><a class="rm_br"><i id="curatorImg" class="imgstreching" style="margin-left: 7px; margin-top: 5px; background-image: url('../images/profiles/prof_1.jpg'); width: 69px; height: 70px;"></i></a></div>
+                                    </div>
+                                </div>
+                                <div style="float: left; padding-left: 20px;" class="broidnormal toUpper ft12">
+                                    <div id="relationName"></div>
+                                    <!-- <div style="margin-top: 7px;">
+                                        <a href="" id="obit_fb" target="_blank" class="rm_br flt" style="display: none;"><div class="ml3 pointer small_facebook_all" onmouseover="facebook_mouseover(this);" onmouseout="facebook_mouseout(this);"></div></a>
+                                        <a href="" id="obit_twitt" target="_blank" class="rm_br flt" style="display: none;"><div class="ml3 pointer small_twitter_all" onmouseover="twitter_mouseover(this);" onmouseout="twitter_mouseout(this);"></div></a>
+                                        <a href="" id="obit_gp" target="_blank" class="rm_br flt" style="display: none;"><div class="ml3 pointer small_google_all" onmouseover="google_mouseover(this);" onmouseout="google_mouseout(this);"></div></a>
+                                        <div class="cbth"></div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div style="float: left; padding-top: 15px;">
+                                <div class="styled-select" id="curt_drp">
+                                    <select name="curator_relationship" id="curator_relationship" class="broidnormal ft13">
+                                        <option value="0">Relationship</option>
+                                        <option value="generalcurator" selected="selected">General Curator</option>
+                                        <option value="mother">Mother</option>
+                                        <option value="father">Father</option>
+                                        <option value="wife">Wife</option>
+                                        <option value="husband">Husband</option>
+                                        <option value="partner">Partner</option>
+                                        <option value="daughter">Daughter</option>
+                                        <option value="son">Son</option>
+                                        <option value="sister">Sister</option>
+                                        <option value="brother">Brother</option>
+                                        <option value="daughterinlaw">Daughter-in-law</option>
+                                        <option value="soninlaw">Son-in-law</option>
+                                        <option value="grandmother">Grandmother</option>
+                                        <option value="grandfather">Grandfather</option>
+                                        <option value="aunt">Aunt</option>
+                                        <option value="uncle">Uncle</option>
+                                        <option value="cousin">Cousin</option>
+                                        <option value="niece">Niece</option>
+                                        <option value="nephew">Nephew</option>
+                                        <option value="granddaughter">Granddaughter</option>
+                                        <option value="grandson">Grandson</option>
+                                        <option value="greategranddaughter">Great Granddaughter</option>
+                                        <option value="greategrandson">Great Grandson</option>
+                                        <option value="greatgrandmother">Great Grandmother</option>
+                                        <option value="greatgrandfather">Great Grandfather</option>
+                                        <option value="motherinlaw">Mother-in-law</option>
+                                        <option value="fatherinlaw">Father-in-law</option>
+                                        <option value="sisterinlaw">Sister-in-law</option>
+                                        <option value="brotherinlaw">Brother-in-law</option>
+                                        <option value="friend">Friend</option>
+                                        <option value="neighbour">Neighbour</option>
+                                        <option value="student">Student</option>
+                                        <option value="teacher">Teacher</option>
+                                        <option value="colleague">Colleague</option>
+                                    </select>
+                                </div>
+                                <div id="cuartor_err" class="cl_red ft12" style="display:none;">Please fill in the details</div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div><label class="broidnormal toUpper ft13">Add family &amp; friends of the departed</label></div>
+                            <div id="moreRelationship" style="padding-top: 15px; padding-left: 20px;">
+                                <div id="delete_rel_row_0">
+                                    <div class="flt w110">&nbsp;</div>
+                                    <div class="flt w300">
+                                        <div class="styled-select" style="width:240px;">
+                                            <select name="relationship_type" class="broidnormal ft13">
+                                                <option value="0">Relationship</option>
+                                                <option value="mother">Mother</option>
+                                                <option value="father">Father</option>
+                                                <option value="wife">Wife</option>
+                                                <option value="husband">Husband</option>
+                                                <option value="partner">Partner</option>
+                                                <option value="daughter">Daughter</option>
+                                                <option value="son">Son</option>
+                                                <option value="sister">Sister</option>
+                                                <option value="brother">Brother</option>
+                                                <option value="daughterinlaw">Daughter-in-law</option>
+                                                <option value="soninlaw">Son-in-law</option>
+                                                <option value="grandmother">Grandmother</option>
+                                                <option value="grandfather">Grandfather</option>
+                                                <option value="aunt">Aunt</option>
+                                                <option value="uncle">Uncle</option>
+                                                <option value="cousin">Cousin</option>
+                                                <option value="niece">Niece</option>
+                                                <option value="nephew">Nephew</option>
+                                                <option value="granddaughter">Granddaughter</option>
+                                                <option value="grandson">Grandson</option>
+                                                <option value="greategranddaughter">Great Granddaughter</option>
+                                                <option value="greategrandson">Great Grandson</option>
+                                                <option value="greatgrandmother">Great Grandmother</option>
+                                                <option value="greatgrandfather">Great Grandfather</option>
+                                                <option value="motherinlaw">Mother-in-law</option>
+                                                <option value="fatherinlaw">Father-in-law</option>
+                                                <option value="sisterinlaw">Sister-in-law</option>
+                                                <option value="brotherinlaw">Brother-in-law</option>
+                                                <option value="friend">Friend</option>
+                                                <option value="neighbour">Neighbour</option>
+                                                <option value="student">Student</option>
+                                                <option value="teacher">Teacher</option>
+                                                <option value="colleague">Colleague</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div style="float:left;">
+                                        <input type="text" class="txt-content" style="width: 212px;" name="relationship_name" value="" placeholder='Name'>
+                                    </div>
+
+                                    <div id="deleteRelationship_0" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_relationship(0);"><img src="images/delete-button.png"></label></div>
+                                    <div id="addRelationship" style="float:left; padding-left: 10px; margin-top: 06px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_relationship(0);"><img src="images/addmore.png"></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="cbth pt8 mem_padding">
+                            <div class="w110 flt pt10"> <label class="broidnormal toUpper ft13">Family Name</label> </div>
+                            <div style="padding-left: 20px;" class="flt"> <input type="text" id="famname" value="" placeholder='Name of family' class="txt-content w360 cl_ltgrey" style="height: 35px; width:510px;"></div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div class="w110 flt pt10"><label class="broidnormal toUpper ft13">School(S)</label></div>
+                            <div id="moreSchool" style="padding-left: 20px;" class="flt">
+                                <div id="delete_school_row_0">
+                                    <div style="float:left;" class="w300">
+                                        <input type="text" name="school_name" class="txt-content" style="width: 235px;" value="" placeholder='Name of School'>
+                                    </div>
+                                    <div style="float:left;">
+                                        <input type="text" name="school_place" id="school_place_0" class="txt-content" style="width: 212px;" value="" placeholder='Place' onclick="schoolPlace(0)">
+                                    </div>
+                                    <div id="deleteSchool_0" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_school(0);"><img src="images/delete-button.png"></label></div>
+                                    <div id="addSchool" style="float:left; padding-left: 10px; margin-top: 06px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_school(0);"><img src="images/addmore.png"></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div class="w110 flt pt10"><label class="broidnormal toUpper ft13">College(S)</label></div>
+                            <div id="moreCollege" style="padding-left: 20px;" class="flt">
+                                <div id="delete_college_row_0">
+                                    <div style="float:left;" class="w300">
+                                        <input type="text" name="college_name" class="txt-content" style="width: 235px;" value="" placeholder='Name of the College'>
+                                    </div>
+                                    <div style="float:left;">
+                                        <input type="text" name="college_place" id="college_place_0" class="txt-content" style="width: 212px;" value="" placeholder='Place' onclick="collegePlace(0)">
+                                    </div>
+                                    <div id="deleteCollege_0" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_college(0);"><img src="images/delete-button.png"></label></div>
+                                    <div id="addCollege" style="float:left; padding-left: 10px; margin-top: 08px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_college(0);"><img src="images/addmore.png"></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div class="w110 flt pt10"><label class="broidnormal toUpper ft13">Employer(S)</label></div>
+                            <div id="moreEmployer" style="padding-left: 20px;" class="flt">
+                                <div id="delete_employer_row_0">
+                                    <div style="float:left;" class="w300">
+                                        <input type="text" name="employer" class="txt-content" style="width: 235px;" value="" placeholder='Name of the Company/ Firm/ Employer'>
+                                    </div>
+                                    <div style="float:left;">
+                                        <input type="text" name="employer_place" id="employer_place_0" class="txt-content" style="width: 212px;" value="" placeholder='Place' onclick="employeePlace(0)">
+                                    </div>
+                                    <div id="deleteEmployer_0" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_employer(0);"><img src="images/delete-button.png"></label></div>
+                                    <div id="addEmployer" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_employer(0);"><img src="images/addmore.png"></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="mem_padding">
+                            <div class="w110 flt pt10"><label class="broidnormal toUpper ft13">PLACE(S) LIVED</label></div>
+                            <div id="moreLived" style="padding-left: 20px;" class="flt">
+                                <div id="delete_lived_row_0">
+                                    <div style="float:left;">
+                                        <input type="text" name="lived" id="lived_0" class="txt-content" style="width: 512px;" value="" placeholder='Prospect Heights, Brooklyn, New York.' onclick="placeLived(0)">
+                                    </div>
+                                    <div id="deleteLived_0" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_lived(0);"><img src="images/delete-button.png"></label></div>
+                                    <div id="addLived" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_lived(0);"><img src="images/addmore.png"></label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+
+                        <div class="mem_padding">
+                            <div><label class="broidnormal toUpper ft13">Memorial setting</label></div>
+                            <div style="padding-top: 7px; padding-left: 20px;">
+                                <div style="float: left; width: 175px;"><label class="broidnormal ft12"><input type="radio" name="public_private" id="public" checked="checked" value="1" style="width: 16px; height: 16px; vertical-align: bottom;"/>Public (Everyone can see)</label></div>
+                                <div style="float: left;"><label class="broidnormal ft12"><input type="radio" name="public_private" id="private" value="0" style="width: 16px; height: 16px; vertical-align: bottom;"/>Private (Only those I add can see)</label></div>
+                            </div>
+                            <div style="clear: both; padding-top: 7px; padding-left: 20px;">
+                                <label class="broidnormal ft12"><input type="checkbox" checked="checked" id="termsAndContions" style="width: 16px; height: 16px; vertical-align: middle; margin-top: -1px;">I have read, understood and agree to the Privacy Policy and Terms of Agreement of Obitopedia.</label>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div style="padding-top: 15px; padding-left: 15px;">
+                            <span class="cl_red ft12">*All boxes marked with the star are compulsory.</span>
+
+                        </div>
+                        <div class="cbth pt10"></div>
+
+                        <div align="center">
+                            <span class="cl_red ft13"><b id="bld2"></b></span>
+                        </div>
+                        <div>
+                            <input id="latitude" name="latitude" class="MapLat" value="0" type="hidden">
+                            <input id="longitude" name="longitude" class="MapLon" value="0" type="hidden">
+                        </div>
+                        <div style="display:none;" id="comProf2" data-toggle="modal" data-target="#comProf2Modal"></div>
+                        <div id="comProf2Modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" style="width: 450px;position: absolute;  top: 24%;  left: 35%;">
+                                <div class="modal-content">
+                                    <img style="position: absolute;margin-left: 427px;margin-top: -11px;cursor: pointer;width: 30px;" src="images/cls_pop.png"/" data-dismiss="modal">
+                                    <div style="padding: 10px 20px 20px 20px; margin: 14px; border-radius: 5px; background-color: #69BBE0; height: 70px;">
+                                        <div align="center">
+                                            <span class="ft13"><b style="color: #6F7173">Your memorial has been created.</b></span>
+                                        </div>
+                                        <div style="text-align: center; margin-top: 10px;">
+                                            <div style="float: left; margin-left: 50px;" id="bld">
+
+                                            </div>
+                                            <div class="flt ml10" id="inviteFam" onclick="invitefrndfamily();">
+                                                <a class="psudo_btn bg_blue w190" style="padding: 5px 0;"><label class="broidnormal ft14 pointer">Invite Family And Friends</label></a>
+                                            </div>
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal-dialog -->
+                        </div><!-- /.modal -->
+                        <div style="clear: both;"></div>
+                        <div style="padding-top: 15px;">
+                            <div style="float: right; padding-bottom: 20px;" class="w550">
+                                <div style="float: left;" onclick="prev();"><a id="psudo_preview" class="psudo_btn" style="width: 130px;"><label class="broidnormal toUpper ft16 pointer">Preview</label></a></div>
+                                <div  data-toggle="modal" data-target="#previewModal" id="preModal" style="display: none;"></div>
+                                <div style="width: 10px; float: left;">&nbsp;</div>
+                                <div style="float: left;" id="psudo_create_div">
+                                    <a href="javascript: void(0);" id="psudo_create" class="psudo_btn broidnormal toUpper ft16 pointer" style="width: 150px; float: left;" onclick="a=validateFields(); if(a!=-1){create_data();}">Create Memorial</a>
+                                </div>
+                                <div style="float: left;" id="viw_mem"></div>
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div data-toggle="modal" data-target="#upgradeModal" id="upModal" style="display: none;"></div>
+                    </div>
+                    <div id="feat-accord" style="padding-top: 10px; display: block;">
+                        <!-- Memorials tabs -->
+                        <div style="background-color: rgba(255,255,255, 0.5); border-radius: 5px;" class="w760 cl_grey">
+                            <div style="padding: 14px 0 14px 14px;">
+                                <div id="feat-mem" class="broidnormal toUpper ft15 home_memorialtabs flt" onclick="memorialTabs('feat-mem');">featured memorials</div>
+                                <div id="fav-mem" class="broidnormal toUpper ft15 home_memorialtabs flt" style="margin-left: 15px;" onclick="memorialTabs('fav-mem');">favourite memorials</div>
+                                <div id="curr-mem" class="broidnormal toUpper ft15 home_memorialtabs flt" style="margin-left: 14px;" onclick="memorialTabs('curr-mem');">curated memorials</div>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <div>
+                                <iframe id="load-memorial-details" class="w760" style="border: none; height: 430px;" src=""></iframe>
+                            </div>
+                            <div style="clear:both;"></div>
+                        </div>
+                        <!-- Blogs -->
+                        <div style="padding-top: 10px;">
+                            <div style="background-color: rgba(255,255,255, 0.5); border-radius: 5px; padding: 15px 0 0 14px;" class="broidnormal">
+
+                                <div class="broidnormal toUpper ft15 home_memorialtabs bg_blue cl_white" style="width: 732px;">popular memorials</div>
+                                <div id="popular_memorials" style="width: 740px; margin-top: 15px; clear: both;"></div>
+                                <div style="clear:both;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footer_menu">
+                    </div>
+                </div>
+
+                <div id="curationlinks" class="w760" style="position: fixed; top:45px; z-index: 11; display: none;"></div>
+                <div id="l_links" class="w760" style="position: fixed; top:50px; z-index: 11; display: none;"></div>
+                <div id="j_links" class="w760" style="position: fixed; top:50px; z-index: 11; display: none;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" id="pratio" name="pratio" />
+<input type="hidden" id="px1" name="px1" />
+<input type="hidden" id="py1" name="py1" />
+<input type="hidden" id="pw" name="pw" />
+<input type="hidden" id="ph" name="ph" />
+<input type="hidden" id="nw" name="nw" />
+<input type="hidden" id="nh" name="nh" />
+
+<input type="hidden" id="phratio" name="phratio" />
+<input type="hidden" id="phx1" name="phx1" />
+<input type="hidden" id="phy1" name="phy1" />
+<input type="hidden" id="phw" name="phw" />
+<input type="hidden" id="phh" name="phh" />
+<input type="hidden" id="hnw" name="hnw" />
+<input type="hidden" id="hnh" name="hnh" />
+
+
+<!-- This is the image we're attaching Jcrop to -->
+<div id="prof_pic_trigger" data-toggle="modal" data-target="#prof_pic"></div>
+<div id="prof_pic" data-backdrop="static" data-keyboard="false" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="jcrop_idd" style="height: 470px;">
+        <div class="modal-content">
+            <img id="jcrop_idd_delet" style="position: absolute;margin-left: 325px;margin-top: -15px;cursor: pointer;width: 30px;" src="images/cls_pop.png" data-dismiss="modal">
+            <button type="button" id="profClose" class="close" data-dismiss="modal" aria-hidden="true" style="display: none;"></button>
+            <div style="top: 10px;">
+                &nbsp;
+            </div>
+            <center>
+                <img src="" id="prof_pic_holder">
+                <img src="" id="prof_pic_holder_1" style="display: none;">
+            </center>
+            <div style="margin-top: 10px; margin-right: 15px;" align="right">
+                <a class="psudo_btn bg_blue w95" style="padding: 5px 0;" onclick="loadProfileImg();">
+                    <label class="broidnormal ft14 pointer">Apply</label>
+                </a>
+            </div>
+            <div style="top: 10px;">
+                &nbsp;
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="prof_head_pic_trigger" data-toggle="modal" data-target="#prof_head_pic"></div>
+<div id="prof_head_pic" data-backdrop="static" data-keyboard="false" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" id="header_jcrop_idd" style="height: 470px;">
+        <div class="modal-content">
+            <img id="header_jcrop_idd_delet" style="position: absolute; margin-left: 325px;margin-top: -15px;cursor: pointer;width: 30px;" src="images/cls_pop.png" data-dismiss="modal">
+            <button type="button" id="profhead_Close" class="close" data-dismiss="modal" aria-hidden="true" style="display: none;"></button>
+            <div style="top: 10px;">
+                &nbsp;
+            </div>
+            <center>
+                <img src="" id="prof_head_pic_holder">
+                <img src="" id="prof_head_pic_holder_1" style="display: none;">
+            </center>
+            <div style="margin-top: 10px; margin-right: 15px;" align="right">
+                <a class="psudo_btn bg_blue w95" style="padding: 5px 0;" onclick="loadProfileHeaderImg();">
+                    <label class="broidnormal ft14 pointer">Apply</label>
+                </a>
+            </div>
+            <div style="top: 10px;">
+                &nbsp;
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="famlyfrnds" data-toggle="modal" data-target="#inviteFamily"></div>
+
+
+<div id="previewModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 785px; height: 600px;">
+        <div class="modal-content" style="background: rgba(241,241,241,0.8);">
+            <img style="position: absolute;margin-left: 762px;margin-top: -15px;cursor: pointer;width: 30px; z-index: 1;" src="images/cls_pop.png"/" data-dismiss="modal">
+            <div style="float: left; width: 520px; background: #EDF7F9; border-radius : 8px; margin: 5px 5px 5px 10px;" class="cl_3e3e3e broidserifnormal">
+                <div style="position: relative; width: 520px; height: 290px;">
+                    <div style="position: absolute;"><img id="hdImg" src="" alt="" style="height: 235px; width: 520px; border-radius: 5px 5px 0 0;"/></div>
+                    <div class="preview_prfImgdiv_withpos">
+                        <img id="prfImg" src="../images/profiles/prof_1.jpg" alt="thumb image" style="height: 113px; width: 113px;">
+                    </div>
+                </div>
+                <div id="des1" style="text-align: center; padding: 5px 0 0 0; min-height: 45px; word-wrap: break-word;"><label id="mem_name_prev" class="toUpper ft25"></label></div>
+                <div id="des2" class="custom_scroll" style="padding: 0 50px; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; text-align: left; height: 182px; clear:both;">
+                    <label class="ft14" style="line-height: 1.55;" id="mem_txt_prev"></label>
+                </div>
+                <div style="float: right;padding-right: 15px;margin-top: -27px; display:none;" id="expandtxt">
+                    <img style="cursor: pointer;" src="images/toparrow.png" onclick="expandtext();"/>
+                </div>
+                <div style="float: right;padding-right: 15px;margin-top: -27px; display:none;" id="collapsetxt">
+                    <img style="cursor: pointer;" src="images/bottomarrow.png" onclick="collapsetext();"/>
+                </div>
+                <div style="padding: 5px 0 10px 50px; border-radius: 8px;">
+                    <div style="width:30%; float:left;" class="ft15 cl_grey">
+                        <div class="broidnormal" style="background: url('../images/flower-x.png') no-repeat; width: 60px; height: 48px; float: left;"></div><div style="padding-top: 25px; margin-left: 20px; " class="flt broidnormal ft14 cl_grey" id="flw_cont">0</div>
+                    </div>
+                    <div style="width:30%; float:left;" class="ft15 cl_grey">
+                        <div id="non-flames" class="broidnormal" style="background: url('../images/light_1.jpg') no-repeat; width: 55px; height:48px; float: left; margin-left: 20px;"></div>
+                    </div>
+                    <div style="width:30%; float:left;" class="ft15 cl_grey">
+                        <div class="broidnormal" style="background: url('../images/tribute-x.png') no-repeat; width: 60px; height: 38px; float: left; margin-left: 35px; margin-top:8px;"></div><div style="padding-top: 25px; margin-left: 15px; " class="flt broidnormal ft14 cl_grey" id="tribute_cont">0</div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <div style="float: left; margin: 0 10px 5px 5px;">
+                <div id="biographical" style="background: url('../images/glass.png') no-repeat; width: 232px; height: 590px;" class="ft11pt">
+                    <div style="text-align: center; margin-left: 5px; width: 225px; padding-top: 30px; text-transform: uppercase; word-wrap: break-word;"><label id="name_prev" style="padding-right:10px;" class="broidbold"></label></div>
+                    <div style="text-align: center; margin-left: 5px; width: 225px;"><label id="bfintro_prev" style="word-wrap: break-word;" class="broidnormal"></label></div>
+                    <div style="padding: 2px 15px 5px 15px;"><div style="margin: 0px; border-bottom: 1px solid #000;"></div></div>
+                    <div class="custom_scroll broidnormal ft12" style="padding-top: 5px; padding-left: 15px; width:215px; height: 475px; overflow-x: hidden;">
+                        <div id="dpob" style="display: table-row;"></div>
+                        <div id="dpod" style="display: table-row;"></div>
+                        <div id="apad" style="display: table-row;"></div>
+                        <div id="apad" style="display: table-row;"></div>
+                        <div id="death_add" style="display: table-row;"></div>
+                        <div id="parents" style="display: table-row;"></div>
+                        <div id="spouse" style="display: table-row;"></div>
+                        <div id="partner" style="display: table-row;"></div>
+                        <div id="children" style="display: table-row;"></div>
+                        <div id="grandchildren" style="display: table-row;"></div>
+                        <div id="greatgrandchildren" style="display: table-row;"></div>
+                        <div id="siblings" style="display: table-row;"></div>
+                        <div id="grandparents" style="display: table-row;"></div>
+                        <div id="greatgrandparent" style="display: table-row;"></div>
+                        <div id="childreninlaw" style="display: table-row;"></div>
+                        <div id="parentsinlaw" style="display: table-row;"></div>
+                        <div id="cousin" style="display: table-row;"></div>
+                        <div id="niece" style="display: table-row;"></div>
+                        <div id="nephew" style="display: table-row;"></div>
+                        <div id="uncle" style="display: table-row;"></div>
+                        <div id="aunt" style="display: table-row;"></div>
+                        <div id="siblingsinlaw" style="display: table-row;"></div>
+                        <div id="motherinlaw" style="display: table-row;"></div>
+                        <div id="fatherinlaw" style="display: table-row;"></div>
+                        <div id="friends" style="display: table-row;"></div>
+                        <div id="neighbour" style="display: table-row;"></div>
+                        <div id="student" style="display: table-row;"></div>
+                        <div id="teacher" style="display: table-row;"></div>
+                        <div id="colleague" style="display: table-row;"></div>
+                        <div id="family" style="display: table-row;"></div>
+                        <div id="school" style="display: table-row;"></div>
+                        <div id="college" style="display: table-row;"></div>
+                        <div id="profe" style="display: table-row;"></div>
+                        <div id="employers" style="display: table-row;"></div>
+                        <div id="plived" style="display: table-row;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cbth"></div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="inviteFamily" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 450px; position: absolute;  top: 20%;  left: 35%;">
+        <div class="modal-content">
+            <div id="send_mail" style="margin: 30px 30px; ">
+                <img style="position: absolute;margin-left: 403px;margin-top: -40px;cursor: pointer;width: 30px;" src="images/cls_pop.png"/" data-dismiss="modal">
+                <div>
+                    <textarea id="email_ids" class="ft13" style="width: 100%; height:50px; border: 1px solid #cccccc; resize: none; padding-left:8px;padding-top:8px; border-radius:6px;" placeholder="Please enter email ids separated by a comma."></textarea>
+                </div>
+                <div id="sending_invi" style="display: none;font-size: 13px;  margin-top: 10px;">Sending invites. Please wait...</div>
+                <div id="plswaitpop" style="display: none; position: fixed; top: 40%; left: 50%;"><img src="images/loading.gif" style="width: 100px; height: 100px; z-index:9999;"></div>
+                <div style="margin-top: 10px;"><center><a onclick="sendEmail();" id="psudo_email" class="psudo_btn bg_blue" style="width: 70px; padding: 4px 0;"><label class="broidnormal ft12 pointer">Send</label></a></center></div>
+            </div>
+            <div id="after_mail" style="margin: 30px 30px; display: none;">
+                <img style="position: absolute;  margin-left: 398px;  margin-top: -38px;cursor: pointer;width: 30px;" src="images/cls_pop.png"/" data-dismiss="modal">
+                <div>
+                    <label class="broidnormal ft16 cl_blue">Invite has been sent to view memorial.</label>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="logi" data-toggle="modal" data-target="#loginModal" style="display: none;"></div>
+<div id="loginModal" data-backdrop="static" data-keyboard="false" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false">
+    <div class="modal-dialog broidnormal" style="width: 575px; margin-top:150px;">
+        <div class="bgcl_white" style="border-radius: 5px;">
+            <div id="logiClose" class="cls_pop" data-dismiss="modal" aria-hidden="true"><img  alt="" src="images/cls_pop.png"></div>
+            <div style="padding: 10px 15px 15px 15px;">
+                <div class="broidnormal cl_grey ft20" style="padding: 30px 0 20px 0; text-align: center;">Not yet on Obitopedia? Join to remember a life.</div>
+                <div>
+                    <div style="float: left;">
+                        <img alt="" src="images/obit_blue.png">
+                    </div>
+                    <div style="float: right; margin-top: 20px;">
+                        <div style="display: table-cell; padding-bottom: 3px; padding-right: 5px;"><a id="joinloin" class="join_tab" style="width: 72px; background-color: #98CEE8;"><span class="ft16">Join</span></a></div>
+                        <div style="display: table-cell; " id="login_div"><a id="login" class="login_tab" style="width: 72px; background-color: #918F90;"><span class="ft16">Log In</span></a></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div style="clear: both; background-color: #98CEE8;border-radius: 5px;padding-left: 30px;height: 205px; margin-top: 3px;">
+                    <div id="login_content" class="ft13" style="display: none;">
+                        <div id="email_login_1">
+
+                            <div style=" width: 185px;padding-top: 20px;"><input class="logintxt" style="width: 180px;" type="text" id="email_id_pop" name="name" placeholder='Email'></div>
+                            <div style="display: table-cell; width: 180px;padding-top: 6px;"><input class="logintxt" style="width: 180px;" type="password" id="email_passwd_pop" onkeypress="showKeyCode_pop(event);" placeholder='Password'></div>
+                            <div style="clear: both;"></div>
+                            <div style="padding-top: 5px;" class="broidnormal ft12">
+                                <div style="float: left; padding-top: 4px;"><input id="remember_me" type="checkbox" checked="checked" style="width: 15px; height: 15px;"></div>
+                                <div class="txt-normal cl_white" style="float: left; padding: 5px 10px 0 5px;">Remember me </div>
+                                <div style="padding: 5px 10px 0 15px;"><a href="javascript:void(0);" onclick="forgotpasswrdd();" style="float: left;" class="cl_blk rm_br underline">Forgot Password?</a></div>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <div style="color:red; height: 15px;"><b id="b_ld_pop"></b></div>
+
+                            <div>
+                                <div style="float: left; margin-right: 15px;padding-top: 15px;" onclick="signIn_pop('login')"><div class="psudo_btn bg_blue" style="width: 72px; padding: 8px 3px 7px 3px;"><label class="broidnormal ft16 pointer">Log In</label></div></div>
+                            </div>
+                        </div>
+                        <div id="ph_login_1" style="display: none;">
+                            <div style=" width: 185px;padding-top: 20px;"><input class="logintxt" style="width: 180px;" type="text" id="phone_id_pop" name="name" placeholder='Mobile' maxlength="14" onkeypress="return isNumberKey(event);"></div>
+                            <div style="display: table-cell; width: 180px;padding-top: 6px;"><input class="logintxt" style="width: 180px;" type="password" id="ph_passwd_pop" onkeypress="showphoneKeyCode_pop(event);" placeholder='Password'></div>
+                            <div style="clear: both;"></div>
+                            <div style="padding-top: 5px;" class="broidnormal ft12">
+                                <div style="float: left; padding-top: 4px;"><input id="remember_me_ph_pop" type="checkbox" checked="checked" style="width: 15px; height: 15px;"></div>
+                                <div class="txt-normal cl_white" style="float: left; padding: 5px 10px 0 5px;">Remember me </div>
+                                <div style="padding: 5px 10px 0 15px;"><a href="javascript:void(0);" onclick="forgotpasswrdd();" style="float: left;" class="cl_blk rm_br underline">Forgot Password?</a></div>
+                                <div style="clear: both;"></div>
+                            </div>
+                            <div style="color:red; height: 15px;"><b id="bld_pop"></b></div>
+
+                            <div>
+                                <div style="float: left; margin-right: 15px;padding-top: 15px;" onclick="ph_login_pop()"><div class="psudo_btn bg_blue" style="width: 72px; padding: 8px 3px 7px 3px;"><label class="broidnormal ft16 pointer">Log In</label></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="join" class="ft13">
+                        <div id="email_join_1">
+                            <div style="display: table-cell; width: 180px;padding-top: 20px;"><input type="text" placeholder="First & Last Name" id="fl_email_name_pop" value="" class="broidnormal logintxt" style="width: 180px;"></div>
+                            <div style=" width: 180px;padding-top: 6px;"> <input type="text" id="emailid_join_pop" value="" class="broidnormal logintxt" placeholder="Email" style="width: 180px;"> </div>
+                            <div style="display: table-cell; width: 180px;padding-top: 6px;"><input type="password" placeholder="Password" id="email_pwd_pop" value="" class="broidnormal logintxt" style="width: 180px;"> </div>
+                            <div><span id="email_join_err_pop" style="padding:2px; color: red;"></span></div>
+                            <div style="float: left; margin-right: 15px;padding-top: 6px;" onclick="a=email_pop_upvalidateFields(); if(a!=-1){email_pop_upsignCompletion();}"><div class="psudo_btn bg_blue" style="width: 72px; padding: 8px 3px 7px 3px;"><label class="broidnormal ft16 pointer">Join</label></div></div>
+
+                            <div style="padding-bottom: 10px;position: absolute;margin-left: 260px;width: 235px;">
+                                <p class="broidnormal cl_white" style="margin:0px; font-size: 10px;">By joining Obitopedia, you agree to our Terms of Use and Data Use Policy, including our Cookie Use.</p>
+                            </div>
+                        </div>
+                        <div id="ph_join_1" style="display: none;">
+                            <div style="display: table-cell; width: 180px;padding-top: 20px;"><input type="text" placeholder="First & Last Name" id="phone_name_pop" value="" class="broidnormal logintxt" style="width: 180px;"></div>
+                            <div style=" width: 180px;padding-top: 6px;"> <input type="text" id="phone_phone_pop" value="" class="broidnormal logintxt" placeholder="Mobile" style="height: 35x; width: 180px;" maxlength="14" onkeypress="return isNumberKey(event);"> </div>
+                            <div style="display: table-cell; width: 180px;padding-top: 6px;"><input type="password" placeholder="Password" id="phone_pwd_pop" value="" class="broidnormal logintxt" style="height: 35px; width: 180px;"> </div>
+                            <div><span id="phone_join_err_pop" style="padding:2px; color: red;"></span></div>
+                            <div style="float: left; margin-right: 15px;padding-top: 6px;" onclick="a=phone_pop_upvalidateFields(); if(a!=-1){phone_pop_upsignCompletion();}"><div class="psudo_btn bg_blue" style="width: 72px; padding: 8px 3px 7px 3px;"><label class="broidnormal ft16 pointer">Join</label></div></div>
+
+                            <div style="padding-bottom: 10px;position: absolute;margin-left: 260px;width: 235px;">
+                                <p class="broidnormal cl_white" style="margin:0px; font-size: 10px;">By joining Obitopedia, you agree to our Terms of Use and Data Use Policy, including our Cookie Use.</p>
+                            </div>
+                        </div>
+                    </div><!-- /.modal -->
+                    <div id="ver_login" style="position:absolute;height: 175px;width: 2px;background-color: rgb(243, 243, 243);margin-top: -125px;margin-left: 225px; display: none;"></div>
+                    <div id="ver_join" style="position:absolute;height: 175px;width: 2px;background-color: rgb(243, 243, 243);margin-top: -135px;margin-left: 225px;"></div>
+
+                    <div style="margin-left:260px; position:absolute;">
+                        <div id="loginusing" style="margin-top: -127px; display:none;">
+                            <div class="broidnormal ft14" style="color: #f3f3f3;padding-bottom: 8px; padding-top:2px;">or login using</div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="fblogin" class="fblog_all" onclick="facebooklogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="twitlogin" class="twitlog_all" onclick="twitterlogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="googlogin" class="googlog_all" onclick="googlelogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px; display: none;">
+                                <div id="emaillogin" class="emailup_all"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="phonelogin" class="phoneup_all"></div>
+                            </div>
+                        </div>
+                        <div id="joinusing" style="display:block;">
+                            <div class="broidnormal ft14" style="color: #f3f3f3;padding-bottom: 8px;margin-top: -135px;">or join using</div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="fbjoin" class="fblog_all" onclick="facebooklogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="twitjoin" class="twitlog_all" onclick="twitterlogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="googjoin" class="googlog_all" onclick="googlelogin('home');"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px; display: none;">
+                                <div id="emailjoin" class="emailup_all"></div>
+                            </div>
+                            <div style="float: left; margin-right: 10px;">
+                                <div id="phonejoin" class="phoneup_all"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div id="loadingpop_gif" style="position: fixed; display: none; top: 40%; left: 45%;"><img src="images/loading.gif" style="width: 100px; height: 100px;"></div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="fpass" data-toggle="modal" data-target="#fpassModal" style="display: none;"></div>
+<div id="fpassModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog broidnormal" style="width: 475px; margin-top:150px;">
+        <div><img  id="cls" style="position: absolute;margin-left: 456px;margin-top: -11px;cursor: pointer;width: 30px;" src="images/cls_pop.png"/" data-dismiss="modal">
+            <button type="button" id="logiClose" class="close" data-dismiss="modal" aria-hidden="true" style="display: none;"></button>
+            <div style="padding: 15px; border-radius:5px; background-color: #fff;">
+
+                <div style="margin-right: 15px;"><label class="cl_grey broidbold ft18 toCap">Reset password</label></div>
+                <div class="mt10 ft12 cl_grey broidnormal">We can help you reset your password using your Obitopedia username or the email address linked to your account</div>
+
+                <div style="clear: both;"></div>
+
+                <div style="padding-top: 15px; margin-top: 10px;border-radius: 5px;background-color: #98CEE8;">
+                    <div style="padding: 10px;">
+                        <div style="float: left; padding-top: 8px;" class="w135"> <label class="broidnormal ft14 cl_grey">E-mail or Username </label> </div>
+                        <div style="float: left;"> <input type="text" id="fp_uname" value="" class="txt-content cl_ltgrey" style="border-radius: 5px; width: 260px; height: 35px; padding: 0 5px 0 10px; border: 0; background-color: #E1F0F7;"></div>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div style="padding: 15px;">
+                        <div style="float: left; padding-top: 10px; margin-left: 70px; width: 60px;"> <label class="broidnormal ft14 cl_grey">Captcha</label></div>
+                        <div style="float: left;"> <input type="text" id="fp_captcha" value="" class="txt-content cl_ltgrey" style="border-radius: 5px; width: 150px; height: 35px; padding: 0 5px 0 10px; border: 0; background-color: #E1F0F7;"></div>
+                    </div>
+                    <div style="clear: both;"></div>
+
+                    <div style="float: left;margin-left:145px;"> <label class="broidnormal mt4 ft11 cl_blue">Captcha letters are case sensitive </label> </div>
+                    <div style="clear: both;"></div>
+                    <div style="float: left;padding-top: 15px;margin-left:145px;" class=""> <label class="broidserifnormal ft28 " id="lb_captcha" style=""> </label> <img src="images/refresh.png" style="margin-left: 35px; margin-top: -10px;cursor: pointer;" onclick="createcaptcha();"></img></div>
+                    <div style="clear: both;"></div>
+                    <div style="color:red; padding-top: 5px; margin-left:140px;"><b id="blderror" class="ft14"></b></div>
+
+                    <div>
+                        <div style="clear: both;"></div>
+                        <div style="padding: 10px; margin-left:135px;"><a id="" class="psudo_btn bg_blue rm_br" style="width: 150px; padding: 5px 10px 9px 5px; " onclick="sendlink();"><span class="ft14">Reset Password</span></a></div>
+
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+
+                <div id="loading_gif" style="position: fixed; display: none; top: 40%; left: 45%;"><img src="images/loading.gif" style="width: 100px; height: 100px;"></div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div id="fpasuccModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog broidnormal" style="width: 430px; margin-top:175px;">
+        <div>
+
+            <div style="padding: 15px; border-radius:5px; background-color: #fff;">
+                <div style="padding-top: 10px; border-radius: 5px;background-color: #98CEE8;">
+                    <div style="color: #686667;font-size: 14px;padding:10px 10px 20px 10px;" id="thanksmail"></div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="fpasucc" data-toggle="modal" data-target="#fpasuccModal" style="display: none;"></div>
+<input type="hidden" id="created_id" value="">
+<input type="hidden" id="user_id" value="">
+
+<input type="hidden" id="ipaddress" value="">
+<div id="plswait" style="display: none; position: fixed; top: 40%; left: 50%; z-index:9;"><img src="images/loading.gif" style="width: 100px; height: 100px;"></div>
 </body>
-</html>
+
+<script type="text/javascript">
+    function expandtext() {
+        $("#des2").css("height","100%");
+        $("#expandtxt").css("display","none");
+        $("#collapsetxt").css("display","block");
+    }
+
+    function collapsetext() {
+        $("#des2").css("height","182px");
+        $("#expandtxt").css("display","block");
+        $("#collapsetxt").css("display","none");
+    }
+
+    $(function(){
+
+        loadData();
+        $('#aad_hide').click(function(){
+            if($('#aad_hide').html()=="Hide"){
+                $('#aad_hide').html("Show");
+            }else{
+                $('#aad_hide').html("Hide");
+            }
+        });
+
+        $('#ft_about').html('About');
+        $('#ft_help').html('Help');
+        $('#ft_blog').html('Blog');
+        $('#ft_jobs').html('Jobs');
+        $('#ft_terms').html('Terms');
+        $('#ft_privacy').html('Privacy');
+        $('#ft_cookies').html('Cookies');
+        $('#ft_mobile').html('Mobile');
+        $('#ft_feedback').html('Feedback');
+        $('#ft_language').html('Languages');
+        $('#home_2').html('Home');
+        $('#cmem_2').html('Create Memorial');
+        $('#notif_2').html('Notifications');
+        $('#msg_2').html('Obito Messages');
+
+        $("#home_1 img").addClass("homehover");
+        $("#home_1 span").addClass("cl_blue");
+
+        $('#relationName').html(localStorage.log_fname+" "+localStorage.log_lname);
+
+
+        var no = Math.floor(Math.random() * 4) + 1;
+        document.getElementById('header_img').style.backgroundImage = "url('../images/headers/header_img_"+ no + ".jpg')";
+        $('#dob').datepicker();
+        $('#dod').datepicker();
+
+        $.fn.slideFadeToggle = function(speed, easing, callback) {
+            return this.animate({
+                opacity : 'toggle',
+                height : 'toggle'
+            }, speed, easing, callback);
+        };
+
+        //accordion
+        $('.accordion').accordion({
+            speed : 'slow',
+            animateOpen : function(elem, opts) { //replace the standard slideUp with custom function
+                if(localStorage.log_email && localStorage.log_email!=null){
+                    elem.next().stop(true, true).slideFadeToggle(opts.speed);
+                }else{
+                    $('#logi').trigger('click');
+                    return -1;
+                }
+            },
+            animateClose : function(elem, opts) { //replace the standard slideDown with custom function
+                if(localStorage.log_email && localStorage.log_email!=null){
+                    elem.next().stop(true, true).slideFadeToggle(opts.speed);
+                }else{
+                    $('#logi').trigger('click');
+                    return -1;
+                }
+            },
+            disabled : false
+        });
+
+
+
+        $("#psudo_prof").on('click', function(e){
+            $("#profile_img").trigger( "click" );
+            e.preventDefault();
+        });
+
+        $("#psudo_header").on('click', function(e){
+            $("#profile_header_img").trigger( "click" );
+            e.preventDefault();
+        });
+
+        $('#memorial_header_theme').html("");
+        var len = 5;
+        for(var i=1; i<len; i++){
+            //var i = il % 4;
+            if(i==1){
+                $('#memorial_header_theme').append('<div class="imgborder pointer" id="memorial_header_'+i+'" onclick="selecttheme('+i+');"><img src="../images/header_photo/header_'+i+'.jpg" class="w165 h120"></div>');
+            }else{
+                $('#memorial_header_theme').append('<div class="noimgborder pointer" id="memorial_header_'+i+'" onclick="selecttheme('+i+');"><img src="../images/header_photo/header_'+i+'.jpg" class="w165 h120"></div>');
+            }
+        }
+//	$('#memorial_header_'+(len-1)).css("margin-right", "0");
+
+
+        $("#profile_img").change(function(){
+
+            var oFile = document.getElementById('profile_img').files[0];
+            if (JSON.stringify(oFile) != undefined) {
+                // filter for image files
+                var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+                if (!rFilter.test(oFile.type)) {
+                    return;
+                }
+                $('#loading_gif').show();
+                var oReader = new FileReader();
+                oReader.onload = function(e) {
+
+                    $('.jcrop-holder').remove();
+                    $('#prof_pic_holder').attr('src', e.target.result);
+                    var img_width = document.getElementById("prof_pic_holder").width, img_height = document.getElementById("prof_pic_holder").height;
+                    if(document.getElementById("prof_pic_holder").width > 900){
+
+                        var mainCanvas = document.createElement("canvas");
+                        var ctx = mainCanvas.getContext("2d");
+                        var img = new Image();
+                        img.src = $('#prof_pic_holder').attr('src');
+                        var frame_size = 900;
+
+                        if(img_width > frame_size){
+                            ratio = frame_size / img_width;
+                            img_width = frame_size;
+                            img_height = img_height * ratio;
+                        }
+                        if(img_height > frame_size){
+                            ratio = frame_size / img_height;
+                            img_height = frame_size;
+                            img_width = img_width * ratio;
+                        }
+
+                        mainCanvas.width = img_width;
+                        mainCanvas.height = img_height;
+
+                        img.onload = function() {
+                            ctx.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
+                            $('#prof_pic_holder').attr('src', mainCanvas.toDataURL("image/jpeg"));
+                            $('.jcrop-holder').remove();
+                            $('#nw').val(img_width);
+                            $('#nh').val(img_height);
+
+                            var frame_size = 470;
+                            var ratio = 1;  // Used for aspect ratio
+
+                            ratio = frame_size / img_height; // get ratio for scaling image
+                            $("#prof_pic_holder").css("height", frame_size);   // Set new height
+                            $('#jcrop_idd').css("width",(img_width * ratio)+30);
+                            $('#jcrop_idd_delet').css("margin-left",(img_width * ratio)+10);
+                            $('#pratio').val(ratio);
+                            $('#loading_gif').hide();
+                            $('#prof_pic_trigger').trigger("click");
+                            setTimeout(function(){
+                                var  xsize_1 = 85,
+                                        ysize_1 = 85;
+                                $('#prof_pic_holder').Jcrop({
+                                    onChange:   showCoords,
+                                    onSelect:   showCoords,
+                                    setSelect: [ 5, 5, xsize_1, ysize_1 ],
+                                    aspectRatio: xsize_1 / ysize_1
+                                });
+                                $('.jcrop-holder img').attr('src', $('#prof_pic_holder').attr('src'));
+                            }, 1000);
+                        };
+                    }else{
+                        $('#nw').val(img_width);
+                        $('#nh').val(img_height);
+                        var frame_size = 470;
+                        var ratio = 1;  // Used for aspect ratio
+
+                        ratio = frame_size / img_height; // get ratio for scaling image
+                        $("#prof_pic_holder").css("height", frame_size);   // Set new height
+                        $('#jcrop_idd').css("width",(img_width * ratio)+30);
+                        $('#jcrop_idd_delet').css("margin-left",(img_width * ratio)+10);
+                        $('#pratio').val(ratio);
+                        $('#loading_gif').hide();
+                        $('#prof_pic_trigger').trigger("click");
+                        setTimeout(function(){
+                            var  xsize_1 = 85,
+                                    ysize_1 = 85;
+                            $('#prof_pic_holder').Jcrop({
+                                onChange:   showCoords,
+                                onSelect:   showCoords,
+                                setSelect: [ 5, 5, xsize_1, ysize_1 ],
+                                aspectRatio: xsize_1 / ysize_1
+                            });
+                            $('.jcrop-holder img').attr('src', $('#prof_pic_holder').attr('src'));
+                        }, 1000);
+                    }
+                };
+                oReader.readAsDataURL(oFile);
+
+            } else {
+                //document.getElementById('prof_filename').innerHTML = "No file chosen";
+            }
+        });
+
+
+        $("#profile_header_img").change(function(){
+
+            var oFile = document.getElementById('profile_header_img').files[0];
+            if (JSON.stringify(oFile) != undefined) {
+                // filter for image files
+                var rFilter = /^(image\/bmp|image\/gif|image\/jpeg|image\/png|image\/tiff)$/i;
+                if (!rFilter.test(oFile.type)) {
+                    return;
+                }
+                $('#headerpic_load').show();
+                var oReader = new FileReader();
+                oReader.onload = function(e) {
+                    $('.jcrop-holder').remove();
+                    $('#prof_head_pic_holder').attr('src', e.target.result);
+                    var img_width = document.getElementById("prof_head_pic_holder").width, img_height = document.getElementById("prof_head_pic_holder").height;
+                    if(document.getElementById("prof_head_pic_holder").width > 900){
+                        var mainCanvas = document.createElement("canvas");
+                        var ctx = mainCanvas.getContext("2d");
+                        var img = new Image();
+                        img.src = $('#prof_head_pic_holder').attr('src');
+                        var frame_size = 900;
+
+                        if(img_width > frame_size){
+                            ratio = frame_size / img_width;
+                            img_width = frame_size;
+                            img_height = img_height * ratio;
+                        }
+                        if(img_height > frame_size){
+                            ratio = frame_size / img_height;
+                            img_height = frame_size;
+                            img_width = img_width * ratio;
+                        }
+
+                        mainCanvas.width = img_width;
+                        mainCanvas.height = img_height;
+
+                        img.onload = function() {
+                            ctx.drawImage(img, 0, 0, mainCanvas.width, mainCanvas.height);
+                            $('#prof_head_pic_holder').attr('src', mainCanvas.toDataURL("image/jpeg"));
+                            $('.jcrop-holder').remove();
+                            $('#hnw').val(img_width);
+                            $('#hnh').val(img_height);
+
+                            var frame_size = 470;
+                            var ratio = 1;  // Used for aspect ratio
+
+                            ratio = frame_size / img_height; // get ratio for scaling image
+                            $("#prof_head_pic_holder").css("height", frame_size);   // Set new height
+                            $('#header_jcrop_idd').css("width",(img_width * ratio)+30);
+                            $('#header_jcrop_idd_delet').css("margin-left",(img_width * ratio)+10);
+                            $('#phratio').val(ratio);
+                            $('#headerpic_load').hide();
+                            $('#prof_head_pic_trigger').trigger("click");
+
+                            setTimeout(function(){
+                                var  xsize_1 = 104,
+                                        ysize_1 = 47;
+                                $('#prof_head_pic_holder').Jcrop({
+                                    onChange:   showheadCoords,
+                                    onSelect:   showheadCoords,
+                                    setSelect: [ 5, 5, xsize_1, ysize_1 ],
+                                    aspectRatio: xsize_1 / ysize_1
+                                });
+                                $('.jcrop-holder img').attr('src', $('#prof_head_pic_holder').attr('src'));
+                            }, 1000);
+
+                        };
+                    }else{
+                        $('#hnw').val(img_width);
+                        $('#hnh').val(img_height);
+
+                        var frame_size = 470;
+                        var ratio = 1;  // Used for aspect ratio
+
+                        ratio = frame_size / img_height; // get ratio for scaling image
+                        $("#prof_head_pic_holder").css("height", frame_size);   // Set new height
+                        $('#header_jcrop_idd').css("width",(img_width * ratio)+30);
+                        $('#header_jcrop_idd_delet').css("margin-left",(img_width * ratio)+10);
+                        $('#phratio').val(ratio);
+                        $('#headerpic_load').hide();
+                        $('#prof_head_pic_trigger').trigger("click");
+                        setTimeout(function(){
+                            var  xsize_1 = 104,
+                                    ysize_1 = 47;
+                            $('#prof_head_pic_holder').Jcrop({
+                                onChange:   showheadCoords,
+                                onSelect:   showheadCoords,
+                                setSelect: [ 5, 5, xsize_1, ysize_1 ],
+                                aspectRatio: xsize_1 / ysize_1
+                            });
+                            $('.jcrop-holder img').attr('src', $('#prof_head_pic_holder').attr('src'));
+                        }, 1000);
+
+                    }
+                };
+                oReader.readAsDataURL(oFile);
+
+
+            } else {
+                //document.getElementById('prof_filename').innerHTML = "No file chosen";
+            }
+        });
+
+        function showheadCoords(c) {
+            $('#phx1').val((c.x)/($('#phratio').val()));
+            $('#phy1').val((c.y)/($('#phratio').val()));
+            $('#phw').val((c.w)/($('#phratio').val()));
+            $('#phh').val((c.h)/($('#phratio').val()));
+        }
+
+    });
+
+    function selecttheme(id){
+        //$("#hdimg").css('display','none');
+        $("#hdimg").removeClass('imgborder');
+        for(var i=1; i<=4; i++){
+            $('#memorial_header_'+i).removeClass("imgborder")
+            $('#memorial_header_'+i).addClass("noimgborder")
+        }
+        $('#memorial_header_'+id).removeClass("noimgborder");
+        $('#memorial_header_'+id).addClass("imgborder");
+
+        $('#memorial_filename').val("../images/header_photo/header_"+id+".jpg");
+    }
+    function loadProfileHeaderImg(){
+
+        $('#phpic img').attr("src", $('#prof_head_pic_holder').attr('src'));
+        var ppic_percentage = ($('#phw').val() - 156) / $('#phw').val();
+
+        var img_width = $('#hnw').val() - ($('#hnw').val() * ppic_percentage);
+        var img_height = $('#hnh').val() - ($('#hnh').val() * ppic_percentage);
+        var x_pos = $('#phx1').val() - ($('#phx1').val() * ppic_percentage);
+        var y_pos = $('#phy1').val() - ($('#phy1').val() * ppic_percentage);
+
+        $('#phpic img').css("width", img_width);
+        $('#phpic img').css("height", img_height);
+        $('#phpic img').css("margin-left", -x_pos);
+        $('#phpic img').css("margin-top", -y_pos);
+
+        /*$('#ppic img').css("width", $('#pw').val());
+         $('#ppic img').css("height", $('#ph').val());
+         $('#ppic img').css("margin-left", -$('#px1').val());
+         $('#ppic img').css("margin-top", -$('#py1').val());
+         */
+        $('#phpic').parent().css("display", "block");
+        $('#profhead_Close').trigger('click');
+
+    }
+
+    function invitefrndfamily(){
+
+        $('#send_mail').css("display", "block");
+        $('#after_mail').css("display", "none");
+        $('#email_ids').val("");
+        $('#famlyfrnds').trigger("click");
+    }
+    function sendEmail(){
+        var uname = $('#user_id').val();
+        var loc = "http://obitopedia.com/memorial/"+uname;
+        var yourPageToShare=loc;
+        if($.trim($('#email_ids').val())==""){
+            return -1;
+        }
+        var filter =  /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        if($('#email_ids').val().indexOf(',')!=-1) {
+            var email=$('#email_ids').val().split(',');
+            for(var j=0;j<email.length;j++) {
+                if (!filter.test(email[j])) {
+                    $('#sending_invi').html('Enter Valid email');
+                    $('#sending_invi').css('color','#ff0000');
+                    $('#sending_invi').css("display", "block");
+                    $('#email_ids').css("outline", "none !important");
+                    $('#email_ids').css("border", "1px solid #ff0000");
+                    $('#email_ids').focus();
+                    return -1;
+                }
+            }
+        }else{
+            if (!filter.test($('#email_ids').val())) {
+                $('#sending_invi').html('Enter Valid email');
+                $('#sending_invi').css('color','#ff0000');
+                $('#sending_invi').css("display", "block");
+                $('#email_ids').css("outline", "none !important");
+                $('#email_ids').css("border", "1px solid #ff0000");
+                $('#email_ids').focus();
+                return -1;
+            }
+        }
+        var notify = {};
+        notify.invities_id = $('#email_ids').val();
+        notify.mem_name = document.getElementById('uname').value;
+        notify.url = yourPageToShare;
+        notify.name = localStorage.log_fname+" "+localStorage.log_lname;
+        $('#plswaitpop').css("display", "block");
+        $.ajax({
+            url : '/sendInvites',
+            data : JSON.stringify(notify),
+            type : "POST",
+            contentType : 'application/json',
+            success : function successmsg(data){
+                var notify={};
+                notify.invities=$('#email_ids').val();
+                $.ajax({
+                    url :'/updateNotification?ids='+document.getElementById('user_id').value+'&notificationType=allowinvite',
+                    data : JSON.stringify(notify),
+                    type : "POST",
+                    contentType : 'application/json',
+                    success : function successmsg(data) {
+                        $('#plswaitpop').css("display", "none");
+                        $('#send_mail').css("display", "none");
+
+                        $('#after_mail').css("display", "block");
+                        //alert('send');
+                        $('#comProf2Modal').modal('hide');
+
+                        $('#gmailshow').modal('hide');
+                    }
+                });
+            },
+            error : function errormsg(data){
+                alert("Error")
+            }
+        });
+    }
+
+    /*function sendEmail(){
+
+     var uname = $('#user_id').val();
+     var loc = "http://obitopedia.com/memorial/"+uname;
+     var yourPageToShare=loc;
+
+     if($.trim($('#email_ids').val())==""){
+     return -1;
+     }
+
+     var notify = {};
+     notify.invities_id = $('#email_ids').val();
+     notify.mem_name = document.getElementById('uname').value;
+     notify.url = yourPageToShare;
+     notify.name = localStorage.log_fname+" "+localStorage.log_lname;
+
+     $('#sending_invi').css("display", "block");
+     $('#psudo_email').removeClass("bg_blue");
+     $('#psudo_email').addClass("bg_grey");
+
+     $.ajax({
+     url : '/sendInvites',
+     data : JSON.stringify(notify),
+     type : "POST",
+     contentType : 'application/json',
+     success : function successmsg(data){
+     $('#sending_invi').css("display", "none");
+     $('#send_mail').css("display", "none");
+     $('#after_mail').css("display", "block");
+     },
+     error : function errormsg(data){
+     alert("Error")
+     }
+     });
+     }
+     */
+    function show_email_login() {
+        document.getElementById('social-log').style.display = "none";
+        document.getElementById('email-log').style.display = "block";
+
+    }
+
+    function hide_email_login() {
+        document.getElementById('social-log').style.display = "block";
+        document.getElementById('email-log').style.display = "none";
+
+    }
+
+    function creatMem() {
+        window.location = "/create";
+    }
+
+    $(document).ready(function() {
+
+        var input = document.getElementById('pod');
+        var autocomplete = new google.maps.places.Autocomplete(input, {types : [ "geocode" ]});
+        var infowindow = new google.maps.InfoWindow();
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function(event) {
+            infowindow.close();
+            var place = autocomplete.getPlace();
+
+            $('#latitude').val(place.geometry.location.lat());
+            $('#longitude').val(place.geometry.location.lng());
+        });
+
+
+
+        var input_1 = document.getElementById('pob');
+        var autocomplete_1 = new google.maps.places.Autocomplete(input_1, { types : [ "geocode" ] });
+        google.maps.event.addListener(autocomplete_1, 'place_changed', function(event) {
+            infowindow.close();
+        });
+
+    });
+
+    var mem_txt;
+
+    function schoolPlace(id){
+        var infowindow_2 = new google.maps.InfoWindow();
+        var input_2 = document.getElementById('school_place_'+id);
+        var autocomplete_2 = new google.maps.places.Autocomplete(input_2, { types : [ "geocode" ] });
+
+        google.maps.event.addListener(autocomplete_2, 'place_changed', function(event) {
+            infowindow_2.close();
+        });
+    }
+
+    function collegePlace(id){
+        var infowindow_2 = new google.maps.InfoWindow();
+        var input_2 = document.getElementById('college_place_'+id);
+        var autocomplete_2 = new google.maps.places.Autocomplete(input_2, { types : [ "geocode" ] });
+
+        google.maps.event.addListener(autocomplete_2, 'place_changed', function(event) {
+            infowindow_2.close();
+        });
+    }
+
+    function employeePlace(id){
+        var infowindow_2 = new google.maps.InfoWindow();
+        var input_2 = document.getElementById('employer_place_'+id);
+        var autocomplete_2 = new google.maps.places.Autocomplete(input_2, { types : [ "geocode" ] });
+
+        google.maps.event.addListener(autocomplete_2, 'place_changed', function(event) {
+            infowindow_2.close();
+        });
+    }
+
+    function placeLived(id){
+        var infowindow_2 = new google.maps.InfoWindow();
+        var input_2 = document.getElementById('lived_'+id);
+        var autocomplete_2 = new google.maps.places.Autocomplete(input_2, { types : [ "geocode" ] });
+
+        google.maps.event.addListener(autocomplete_2, 'place_changed', function(event) {
+            infowindow_2.close();
+        });
+    }
+
+    // Simple event handler, called from onChange and onSelect
+    // event handlers, as per the Jcrop invocation above
+    function showCoords(c) {
+        $('#px1').val((c.x)/($('#pratio').val()));
+        $('#py1').val((c.y)/($('#pratio').val()));
+        $('#pw').val((c.w)/($('#pratio').val()));
+        $('#ph').val((c.h)/($('#pratio').val()));
+    }
+
+    function loadProfileImg(){
+        $('#ppic img').attr("src", $('#prof_pic_holder').attr('src'));
+        var ppic_percentage = ($('#pw').val() - 100) / $('#pw').val();
+
+        var img_width = $('#nw').val() - ($('#nw').val() * ppic_percentage);
+        var img_height = $('#nh').val() - ($('#nh').val() * ppic_percentage);
+        var x_pos = $('#px1').val() - ($('#px1').val() * ppic_percentage);
+        var y_pos = $('#py1').val() - ($('#py1').val() * ppic_percentage);
+
+        $('#ppic img').css("width", img_width);
+        $('#ppic img').css("height", img_height);
+        $('#ppic img').css("margin-left", -x_pos);
+        $('#ppic img').css("margin-top", -y_pos);
+
+        $('#ppic').css("display", "block");
+        $('#profClose').trigger('click');
+    }
+
+    function validateFields() {
+
+        var flg = false;
+        document.getElementById("bld").innerHTML = "";
+        var lblAlert = document.getElementById("bld");
+
+        if (document.getElementById("uname").value == "") {
+            flg = true;
+            $('#uname_err').css("display", "block");
+            $('#uname').css("outline", "none !important");
+            $('#uname').css("border", "1px solid #ff0000");
+            $('#uname').focus();
+        }else{
+            $('#uname_err').css("display", "none");
+            $('#uname').css("outline", "none !important");
+            $('#uname').css("border", "");
+        }
+        if ($.trim(CKEDITOR.instances.editor1.getData()) == "") {
+            flg = true;
+            $('#memText_err').css("display", "block");
+            $('#cke_editor1 iframe').css("outline", "none !important");
+            $('#cke_editor1 iframe').css("border", "1px solid #ff0000");
+            $('#cke_editor1 iframe').css("height", "99%");
+            $('#cke_editor1 iframe').css("width", "727px");
+            $('#cke_editor1 iframe').focus();
+        }else{
+            /*if(CKEDITOR.instances.editor1.document.getBody().getText().length > memorial_text){
+             $('#memText_err_1').html("Memorial Text cannont exceed more than "+memorial_text+" characters.");
+             $('#cke_editor1 iframe').css("border", "1px solid #ff0000");
+             $('#memText_err_1').css("display", "block");
+             $('#cke_editor1 iframe').focus();
+             return -1
+             }*/
+            $('#memText_err_1').css("display", "none");
+            $('#memText_err').css("display", "none");
+            $('#cke_editor1 iframe').css("outline", "none !important");
+            $('#cke_editor1 iframe').css("border", "");
+        }
+        if (document.getElementById("bfintro").value == "") {
+            flg = true;
+            $('#bfintro_err').css("display", "block");
+            $('#bfintro').css("outline", "none !important");
+            $('#bfintro').css("border", "1px solid #ff0000");
+            $('#bfintro').focus();
+        }else{
+            $('#bfintro_err').css("display", "none");
+            $('#bfintro').css("outline", "none !important");
+            $('#bfintro').css("border", "");
+
+
+        }
+        if(document.getElementById('curator_relationship').value==0){
+            flg = true;
+            $('#cuartor_err').css("display", "block");
+            $('#curt_drp').css("outline", "none !important");
+            $('#curt_drp').css("border", "1px solid #ff0000");
+            $('#curator_relationship').focus();
+        }else{
+            $('#cuartor_err').css("display", "none");
+            $('#curt_drp').css("outline", "none !important");
+            $('#curt_drp').css("border", "");
+        }
+        if(flg){
+            return -1;
+        }
+    }
+
+    function create_data() {
+
+        if(localStorage.log_email && localStorage.log_email!=null){
+
+        }else{
+            $('#logi').trigger('click');
+            return -1;
+        }
+        $('#plswait').show();
+        if (document.getElementById('termsAndContions').checked) {
+
+            $('#psudo_create').html("Please Wait...");
+            var mem_name = document.getElementById('uname').value;
+            mem_name = mem_name.replace(/\s/g, '');
+
+            $.ajax({
+                //url : '/obits/'+_id,
+                url : '/checkMemorial?status=create&mem_name='+mem_name,
+                type : "GET",
+                success : function(data) {
+                    if(data.length > 0){
+                        mem_name = mem_name+"_"+data.length;
+                    }
+
+                    var photocount = 0;
+                    var headercount = 0;
+                    var uname = document.getElementById('uname').value;
+                    var dob = "";
+                    var dod = "";
+                    if(document.getElementById('dob').value!=""){
+                        dob = new Date(document.getElementById('dob').value);
+                    }
+                    if(document.getElementById('dod').value!=""){
+                        dod = new Date(document.getElementById('dod').value);
+                    }
+                    var pob = document.getElementById('pob').value;
+                    var pod = document.getElementById('pod').value;
+                    var profession = document.getElementById('profession').value;
+                    var bfintro = document.getElementById('bfintro').value;
+
+                    var r_name_obj = document.getElementsByName('relationship_name');
+                    var r_type_obj = document.getElementsByName('relationship_type');
+                    var r_name = new Array();
+                    var r_type = new Array();
+
+                    for ( var i = 0; i < r_name_obj.length; i++) {
+                        if (r_name_obj[i].value != "") {
+                            r_name[i] = r_name_obj[i].value;
+                            r_type[i] = r_type_obj[i].value;
+                        }
+                    }
+                    var s_name_obj = document.getElementsByName('school_name');
+                    var s_place_obj = document.getElementsByName('school_place');
+                    var s_name = new Array();
+                    var s_place = new Array();
+                    for ( var i = 0; i < s_name_obj.length; i++) {
+                        if (s_name_obj[i].value != "") {
+                            s_name[i] = s_name_obj[i].value;
+                            s_place[i] = s_place_obj[i].value;
+                        }
+                    }
+                    var c_name_obj = document.getElementsByName('college_name');
+                    var c_place_obj = document.getElementsByName('college_place');
+                    var c_name = new Array();
+                    var c_place = new Array();
+                    for ( var i = 0; i < c_name_obj.length; i++) {
+                        if (c_name_obj[i].value != "") {
+                            c_name[i] = c_name_obj[i].value;
+                            c_place[i] = c_place_obj[i].value;
+                        }
+                    }
+
+                    var emp_obj = document.getElementsByName('employer');
+                    var emp_place_obj = document.getElementsByName('employer_place');
+                    var emp = new Array();
+                    var emp_place = new Array();
+                    for ( var i = 0; i < emp_obj.length; i++) {
+                        if (emp_obj[i].value != "") {
+                            emp[i] = emp_obj[i].value;
+                            emp_place[i] = emp_place_obj[i].value;
+                        }
+                    }
+
+                    var place_obj = document.getElementsByName('lived');
+                    var place = new Array();
+                    for ( var i = 0; i < place_obj.length; i++) {
+                        if (place_obj[i].value != "") {
+                            place[i] = place_obj[i].value;
+                        }
+                    }
+                    var favour = new Array();
+
+                    var obits = {};
+
+                    obits.uname = uname;
+                    obits.bfintro = bfintro;
+                    obits.dob = dob;
+                    obits.dod = dod;
+                    obits.aad = $('#aad').val();
+                    if($('#aad_hide').html()=="Hide"){
+                        obits.aadhide=0;
+                    }
+                    if($('#aad_hide').html()=="Show"){
+                        obits.aadhide=1;
+                    }
+                    obits.pob = pob;
+                    obits.pod = pod;
+                    obits.profession = profession;
+                    obits.memText =  {};
+                    var mt = {};
+                    var mem_text_lang_code = [];
+                    var mem_text_lang_data = [];
+                    mem_text_lang_code.push($('#memorial_text_lang').val());
+                    mem_text_lang_data.push(CKEDITOR.instances.editor1.getData());
+
+                    mt.lang = mem_text_lang_code;
+                    mt.data = mem_text_lang_data;
+                    obits.memText =  mt;
+
+                    obits.r_name = r_name;
+                    obits.r_type = r_type;
+                    obits.famname=$('#famname').val();
+                    obits.school_name = s_name;
+                    obits.school_place = s_place;
+                    obits.college_name = c_name;
+                    obits.college_place = c_place;
+                    obits.emp = emp;
+                    obits.emp_place = emp_place;
+                    obits.place = place;
+                    obits.photoImg = "";
+                    obits.email = localStorage.log_email;
+                    obits.curatorName = localStorage.log_fname+" "+localStorage.log_lname;
+                    obits.curatorRelation = $('#curator_relationship').val();
+                    obits.ispaid = 0;
+                    obits.userId = mem_name;
+                    obits.latitude = document.getElementById('latitude').value;
+                    obits.longitude = document.getElementById('longitude').value;
+                    obits.featured = 0;
+                    obits.favourites = favour;
+                    obits.diya = [];
+                    obits.diya_datetime = [];
+                    obits.newdiya = 0;
+                    obits.flower = [];
+                    obits.flower_datetime = [];
+                    obits.newflower = 0;
+                    obits.tribute = [];
+                    obits.tribute_data = [];
+                    obits.newtribute = 0;
+                    obits.no_of_counts = 0;
+                    obits.prof_img = 0;
+                    obits.mem_settings = 0;
+                    obits.backgrnd_img = 0;
+                    obits.backgrnd_music = 0;
+                    obits.timeline = 0;
+                    obits.familytree = 0;
+                    obits.memories = 0;
+                    obits.adjoin_memorial = 0;
+                    obits.date_time = new Date();
+                    obits.ipaddress = $('#ipaddress').val();
+                    obits.deleted = 0;
+                    obits.curdeleted = 0;
+                    obits.activation = 1;
+                    obits.curactivation = 1;
+
+                    if ($('#public').is(':checked')) {
+                        obits.public_private = 1;
+                    } else {
+                        obits.public_private = 0;
+                    }
+                    var imagesrc = $('#ppic img').attr("src");
+                    var headersrc = $('#phpic img').attr("src");
+                    obits.headerImg = $('#memorial_filename').val();
+
+                    if(imagesrc && imagesrc!=""){
+                        var splitbase64 = imagesrc.split("base64")
+                        var insertImg = {};
+                        insertImg.src = splitbase64[1];
+                        insertImg.filename = mem_name+"_ppic.jpg";
+                        $.ajax({
+                            type : "POST",
+                            url : '/insertprofilepic',
+                            data : insertImg,
+                            success : function(imgpath) {
+                                obits.photoImg = imgpath;
+
+                                var imagePosition = {};
+                                imagePosition.x = $('#px1').val();
+                                imagePosition.y = $('#py1').val();
+                                imagePosition.natural_width = $('#nw').val();
+                                imagePosition.natural_height = $('#nh').val();
+                                imagePosition.crop_width = $('#pw').val();
+                                imagePosition.crop_height = $('#ph').val();
+
+                                obits.xy_pos = imagePosition;
+
+                                if(headersrc && headersrc!=""){
+                                    var splitbase64 = headersrc.split("base64")
+                                    var headerImg = {};
+                                    headerImg.src = splitbase64[1];
+                                    headerImg.filename = mem_name+"_hpic.jpg";
+                                    $('#headerpic_load').show();
+                                    $.ajax({
+                                        type : "POST",
+
+                                        url : '/insertheaderpic',
+                                        data : headerImg,
+                                        success : function(imgpath) {
+
+                                            obits.headerImg = "../images/header_photo/"+mem_name+"_hpic.jpg";
+                                            var header_imagePosition = {};
+                                            header_imagePosition.x = $('#phx1').val();
+                                            header_imagePosition.y = $('#phy1').val();
+                                            header_imagePosition.natural_width = $('#hnw').val();
+                                            header_imagePosition.natural_height = $('#hnh').val();
+                                            header_imagePosition.crop_width = $('#phw').val();
+                                            header_imagePosition.crop_height = $('#phh').val();
+
+                                            obits.header_xy_pos = header_imagePosition;
+                                            $.ajax({
+                                                url : '/insert?obitTable=1',
+                                                data : JSON.stringify(obits),
+                                                type : "POST",
+                                                contentType : 'application/json',
+                                                success : function successmsg(data) {
+                                                    var res = eval("([" + data + "])");
+                                                    if (data != null) {
+
+                                                        //adding data to obitshistory collection which stores historic data
+                                                        obits.mainid = res[0]._id;
+                                                        $.ajax({
+                                                            url : '/insertHistory',
+                                                            data : JSON.stringify(obits),
+                                                            type : "POST",
+                                                            contentType : 'application/json',
+                                                            success : function successmsg(data) {
+                                                                var res = data;
+                                                                $('#uname').addClass('txtTransparent');
+                                                                $('#uname').attr('disabled', true);
+                                                                $('#bfintro').addClass('txtTransparent');
+                                                                $('#bfintro').attr('disabled', true);
+                                                                $('#dob').attr('disabled', true);
+                                                                $('#dob').addClass('txtTransparent');
+                                                                $('#dob').removeClass('dates');
+                                                                $('#dod').attr('disabled', true);
+                                                                $('#dod').addClass('txtTransparent');
+                                                                $('#dod').removeClass('dates');
+
+                                                                $('#pob').addClass('txtTransparent');
+                                                                $('#pob').attr('disabled', true);
+                                                                $('#pob').attr('placeholder', '');
+                                                                $('#pod').addClass('txtTransparent');
+                                                                $('#pod').attr('disabled', true);
+                                                                $('#pod').attr('placeholder', '');
+                                                                $('#profession').addClass('txtTransparent');
+                                                                $('#profession').attr('disabled', true);
+                                                                $('#profession').attr('placeholder', '');
+                                                                $('#famname').addClass('txtTransparent');
+                                                                $('#famname').attr('disabled', true);
+                                                                $('#famname').attr('placeholder', '');
+                                                                $('#curator_relationship').addClass('txtTransparent');
+                                                                $('#curator_relationship').attr('disabled', true);
+                                                                $('#memorial_text_lang').addClass('txtTransparent');
+                                                                $('#memorial_text_lang').attr('disabled', true);
+
+                                                                for(var index=0; index < r_name_obj.length; index++){
+                                                                    r_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    r_type_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    r_name_obj[index].setAttribute('disabled', true);
+                                                                    r_name_obj[index].setAttribute('placeholder', '');
+                                                                    r_type_obj[index].setAttribute('disabled', true);
+                                                                }
+                                                                for(var index=0; index < s_name_obj.length; index++){
+                                                                    s_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    s_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    s_name_obj[index].setAttribute('disabled', true);
+                                                                    s_name_obj[index].setAttribute('placeholder', '');
+                                                                    s_place_obj[index].setAttribute('disabled', true);
+                                                                }
+                                                                for(var index=0; index < c_name_obj.length; index++){
+                                                                    c_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    c_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    c_name_obj[index].setAttribute('disabled', true);
+                                                                    c_name_obj[index].setAttribute('placeholder', '');
+                                                                    c_place_obj[index].setAttribute('disabled', true);
+                                                                }
+                                                                for(var index=0; index < emp_obj.length; index++){
+                                                                    emp_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    emp_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    emp_obj[index].setAttribute('disabled', true);
+                                                                    emp_obj[index].setAttribute('placeholder', '');
+                                                                    emp_place_obj[index].setAttribute('disabled', true);
+                                                                }
+                                                                for(var index=0; index < place_obj.length; index++){
+                                                                    place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                                    place_obj[index].setAttribute('disabled', true);
+                                                                    place_obj[index].setAttribute('placeholder', '');
+                                                                }
+                                                                $('#plswait').hide();
+                                                                $('#comProf2').trigger('click');
+                                                                $('#psudo_create').html('Create Memorial');
+                                                                $('#psudo_create_div').css("display", "none");
+
+                                                                $('#created_id').val(obits.mainid);
+                                                                $('#user_id').val(res[0].userId);
+                                                                if (data && data.length>0) {
+                                                                    document.getElementById('bld').innerHTML = '<a class="psudo_btn bg_blue w70" style="padding: 5px 0;"><label class="broidnormal ft14 pointer" onclick="viewMemorial(\''+ res[0].userId+ '\');">View</label></a>';
+                                                                    document.getElementById('viw_mem').innerHTML = '<a href="javascript: void(0);" class="psudo_btn broidnormal toUpper ft16 pointer" style="width: 150px; float: left;" onclick="viewMemorial(\''+ res[0].userId+ '\');">view memorial</a>';
+                                                                }
+                                                            },
+                                                            error : function errormsg(data) {
+                                                                if (data != null) {
+                                                                    document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                                                }
+                                                            }
+                                                        });
+                                                    }
+                                                },
+                                                error : function errormsg(data) {
+                                                    if (data != null) {
+                                                        document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                                    }
+                                                }
+                                            });
+                                        },
+                                        error : function errormsg(data) {
+                                            if (data != null) {
+                                                document.getElementById('bld').innerHTML = "Unable to Upload Header";
+                                            }
+                                        }
+                                    });
+                                }else{
+                                    $.ajax({
+                                        url : '/insert?obitTable=1',
+                                        data : JSON.stringify(obits),
+                                        type : "POST",
+                                        contentType : 'application/json',
+                                        success : function successmsg(data) {
+                                            var res = eval("([" + data + "])");
+                                            if (data != null) {
+
+                                                //adding data to obitshistory collection which stores historic data
+                                                obits.mainid = res[0]._id;
+                                                $.ajax({
+                                                    url : '/insertHistory',
+                                                    data : JSON.stringify(obits),
+                                                    type : "POST",
+                                                    contentType : 'application/json',
+                                                    success : function successmsg(data) {
+                                                        var res = data;
+                                                        $('#uname').addClass('txtTransparent');
+                                                        $('#uname').attr('disabled', true);
+                                                        $('#bfintro').addClass('txtTransparent');
+                                                        $('#bfintro').attr('disabled', true);
+                                                        $('#dob').attr('disabled', true);
+                                                        $('#dob').addClass('txtTransparent');
+                                                        $('#dob').removeClass('dates');
+                                                        $('#dod').attr('disabled', true);
+                                                        $('#dod').addClass('txtTransparent');
+                                                        $('#dod').removeClass('dates');
+
+                                                        $('#pob').addClass('txtTransparent');
+                                                        $('#pob').attr('disabled', true);
+                                                        $('#pob').attr('placeholder', '');
+                                                        $('#pod').addClass('txtTransparent');
+                                                        $('#pod').attr('disabled', true);
+                                                        $('#pod').attr('placeholder', '');
+                                                        $('#profession').addClass('txtTransparent');
+                                                        $('#profession').attr('disabled', true);
+                                                        $('#profession').attr('placeholder', '');
+                                                        $('#famname').addClass('txtTransparent');
+                                                        $('#famname').attr('disabled', true);
+                                                        $('#famname').attr('placeholder', '');
+                                                        $('#curator_relationship').addClass('txtTransparent');
+                                                        $('#curator_relationship').attr('disabled', true);
+                                                        $('#memorial_text_lang').addClass('txtTransparent');
+                                                        $('#memorial_text_lang').attr('disabled', true);
+
+                                                        for(var index=0; index < r_name_obj.length; index++){
+                                                            r_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            r_type_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            r_name_obj[index].setAttribute('disabled', true);
+                                                            r_name_obj[index].setAttribute('placeholder', '');
+                                                            r_type_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < s_name_obj.length; index++){
+                                                            s_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            s_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            s_name_obj[index].setAttribute('disabled', true);
+                                                            s_name_obj[index].setAttribute('placeholder', '');
+                                                            s_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < c_name_obj.length; index++){
+                                                            c_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            c_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            c_name_obj[index].setAttribute('disabled', true);
+                                                            c_name_obj[index].setAttribute('placeholder', '');
+                                                            c_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < emp_obj.length; index++){
+                                                            emp_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            emp_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            emp_obj[index].setAttribute('disabled', true);
+                                                            emp_obj[index].setAttribute('placeholder', '');
+                                                            emp_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < place_obj.length; index++){
+                                                            place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            place_obj[index].setAttribute('disabled', true);
+                                                            place_obj[index].setAttribute('placeholder', '');
+                                                        }
+                                                        $('#plswait').hide();
+                                                        $('#comProf2').trigger('click');
+                                                        $('#psudo_create').html('Create Memorial');
+                                                        $('#psudo_create_div').css("display", "none");
+
+                                                        $('#created_id').val(obits.mainid);
+                                                        $('#user_id').val(res[0].userId);
+                                                        if (data && data.length>0) {
+                                                            document.getElementById('bld').innerHTML = '<a class="psudo_btn bg_blue w70" style="padding: 5px 0;"><label class="broidnormal ft14 pointer" onclick="viewMemorial(\''+ res[0].userId+ '\');">View</label></a>';
+                                                            document.getElementById('viw_mem').innerHTML = '<a href="javascript: void(0);" class="psudo_btn broidnormal toUpper ft16 pointer" style="width: 150px; float: left;" onclick="viewMemorial(\''+ res[0].userId+ '\');">view memorial</a>';
+                                                        }
+                                                    },
+                                                    error : function errormsg(data) {
+                                                        if (data != null) {
+                                                            document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        },
+                                        error : function errormsg(data) {
+                                            if (data != null) {
+                                                document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                            }
+                                        }
+                                    });
+                                }
+
+
+                            },
+                            error : function(data) { // if error occured
+                                alert("Msg: "+ data.status + ": " + data.statusText);
+                            }
+                        });
+
+                    }else{
+                        if(headersrc && headersrc!=""){
+                            var splitbase64 = headersrc.split("base64")
+                            var headerImg = {};
+                            headerImg.src = splitbase64[1];
+                            headerImg.filename = mem_name+"_hpic.jpg";
+                            $('#headerpic_load').show();
+                            $.ajax({
+                                type : "POST",
+
+                                url : '/insertheaderpic',
+                                data : headerImg,
+                                success : function(imgpath) {
+
+
+                                    obits.headerImg = "../images/header_photo/"+mem_name+"_hpic.jpg";
+                                    var header_imagePosition = {};
+                                    header_imagePosition.x = $('#phx1').val();
+                                    header_imagePosition.y = $('#phy1').val();
+                                    header_imagePosition.natural_width = $('#hnw').val();
+                                    header_imagePosition.natural_height = $('#hnh').val();
+                                    header_imagePosition.crop_width = $('#phw').val();
+                                    header_imagePosition.crop_height = $('#phh').val();
+
+                                    obits.header_xy_pos = header_imagePosition;
+                                    $.ajax({
+                                        url : '/insert?obitTable=1',
+                                        data : JSON.stringify(obits),
+                                        type : "POST",
+                                        contentType : 'application/json',
+                                        success : function successmsg(data) {
+                                            var res = eval("([" + data + "])");
+                                            if (data != null) {
+
+                                                //adding data to obitshistory collection which stores historic data
+                                                obits.mainid = res[0]._id;
+                                                $.ajax({
+                                                    url : '/insertHistory',
+                                                    data : JSON.stringify(obits),
+                                                    type : "POST",
+                                                    contentType : 'application/json',
+                                                    success : function successmsg(data) {
+                                                        $('#uname').addClass('txtTransparent');
+                                                        $('#uname').attr('disabled', true);
+                                                        $('#bfintro').addClass('txtTransparent');
+                                                        $('#bfintro').attr('disabled', true);
+                                                        $('#dob').attr('disabled', true);
+                                                        $('#dob').addClass('txtTransparent');
+                                                        $('#dob').removeClass('dates');
+                                                        $('#dod').attr('disabled', true);
+                                                        $('#dod').addClass('txtTransparent');
+                                                        $('#dod').removeClass('dates');
+
+                                                        $('#pob').addClass('txtTransparent');
+                                                        $('#pob').attr('disabled', true);
+                                                        $('#pob').attr('placeholder', '');
+                                                        $('#pod').addClass('txtTransparent');
+                                                        $('#pod').attr('disabled', true);
+                                                        $('#pod').attr('placeholder', '');
+                                                        $('#profession').addClass('txtTransparent');
+                                                        $('#profession').attr('disabled', true);
+                                                        $('#profession').attr('placeholder', '');
+                                                        $('#famname').addClass('txtTransparent');
+                                                        $('#famname').attr('disabled', true);
+                                                        $('#famname').attr('placeholder', '');
+                                                        $('#curator_relationship').addClass('txtTransparent');
+                                                        $('#curator_relationship').attr('disabled', true);
+                                                        $('#memorial_text_lang').addClass('txtTransparent');
+                                                        $('#memorial_text_lang').attr('disabled', true);
+
+                                                        for(var index=0; index < r_name_obj.length; index++){
+                                                            r_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            r_type_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            r_name_obj[index].setAttribute('disabled', true);
+                                                            r_name_obj[index].setAttribute('placeholder', '');
+                                                            r_type_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < s_name_obj.length; index++){
+                                                            s_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            s_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            s_name_obj[index].setAttribute('disabled', true);
+                                                            s_name_obj[index].setAttribute('placeholder', '');
+                                                            s_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < c_name_obj.length; index++){
+                                                            c_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            c_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            c_name_obj[index].setAttribute('disabled', true);
+                                                            c_name_obj[index].setAttribute('placeholder', '');
+                                                            c_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < emp_obj.length; index++){
+                                                            emp_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            emp_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            emp_obj[index].setAttribute('disabled', true);
+                                                            emp_obj[index].setAttribute('placeholder', '');
+                                                            emp_place_obj[index].setAttribute('disabled', true);
+                                                        }
+                                                        for(var index=0; index < place_obj.length; index++){
+                                                            place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                            place_obj[index].setAttribute('disabled', true);
+                                                            place_obj[index].setAttribute('placeholder', '');
+                                                        }
+
+                                                        $('#plswait').hide();
+                                                        $('#comProf2').trigger('click');
+                                                        $('#psudo_create').html('Create Memorial');
+                                                        $('#psudo_create_div').css("display", "none");
+                                                        var res = data;
+                                                        $('#created_id').val(obits.mainid);
+                                                        $('#user_id').val(res[0].userId);
+                                                        if (data && data.length>0) {
+                                                            document.getElementById('bld').innerHTML = '<a class="psudo_btn bg_blue w70" style="padding: 5px 0;"><label class="broidnormal ft14 pointer" onclick="viewMemorial(\''+ res[0].userId+ '\');">View</label></a>';
+                                                            document.getElementById('viw_mem').innerHTML = '<a href="javascript: void(0);" class="psudo_btn broidnormal toUpper ft16 pointer" style="width: 150px; float: left;" onclick="viewMemorial(\''+ res[0].userId+ '\');">view memorial</a>';
+                                                        }
+                                                    },
+                                                    error : function errormsg(data) {
+                                                        if (data != null) {
+                                                            document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        },
+                                        error : function errormsg(data) {
+                                            if (data != null) {
+                                                document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                            }
+                                        }
+                                    });
+                                },
+                                error : function errormsg(data) {
+                                    if (data != null) {
+                                        document.getElementById('bld').innerHTML = "Unable to Upload Header";
+                                    }
+                                }
+                            });
+                        }else{
+                            $.ajax({
+                                url : '/insert?obitTable=1',
+                                data : JSON.stringify(obits),
+                                type : "POST",
+                                contentType : 'application/json',
+                                success : function successmsg(data) {
+                                    var res = eval("([" + data + "])");
+                                    if (data != null) {
+
+                                        //adding data to obitshistory collection which stores historic data
+                                        obits.mainid = res[0]._id;
+                                        $.ajax({
+                                            url : '/insertHistory',
+                                            data : JSON.stringify(obits),
+                                            type : "POST",
+                                            contentType : 'application/json',
+                                            success : function successmsg(data) {
+                                                $('#uname').addClass('txtTransparent');
+                                                $('#uname').attr('disabled', true);
+                                                $('#bfintro').addClass('txtTransparent');
+                                                $('#bfintro').attr('disabled', true);
+                                                $('#dob').attr('disabled', true);
+                                                $('#dob').addClass('txtTransparent');
+                                                $('#dob').removeClass('dates');
+                                                $('#dod').attr('disabled', true);
+                                                $('#dod').addClass('txtTransparent');
+                                                $('#dod').removeClass('dates');
+
+                                                $('#pob').addClass('txtTransparent');
+                                                $('#pob').attr('disabled', true);
+                                                $('#pob').attr('placeholder', '');
+                                                $('#pod').addClass('txtTransparent');
+                                                $('#pod').attr('disabled', true);
+                                                $('#pod').attr('placeholder', '');
+                                                $('#profession').addClass('txtTransparent');
+                                                $('#profession').attr('disabled', true);
+                                                $('#profession').attr('placeholder', '');
+                                                $('#famname').addClass('txtTransparent');
+                                                $('#famname').attr('disabled', true);
+                                                $('#famname').attr('placeholder', '');
+                                                $('#curator_relationship').addClass('txtTransparent');
+                                                $('#curator_relationship').attr('disabled', true);
+                                                $('#memorial_text_lang').addClass('txtTransparent');
+                                                $('#memorial_text_lang').attr('disabled', true);
+
+                                                for(var index=0; index < r_name_obj.length; index++){
+                                                    r_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    r_type_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    r_name_obj[index].setAttribute('disabled', true);
+                                                    r_name_obj[index].setAttribute('placeholder', '');
+                                                    r_type_obj[index].setAttribute('disabled', true);
+                                                }
+                                                for(var index=0; index < s_name_obj.length; index++){
+                                                    s_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    s_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    s_name_obj[index].setAttribute('disabled', true);
+                                                    s_name_obj[index].setAttribute('placeholder', '');
+                                                    s_place_obj[index].setAttribute('disabled', true);
+                                                }
+                                                for(var index=0; index < c_name_obj.length; index++){
+                                                    c_name_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    c_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    c_name_obj[index].setAttribute('disabled', true);
+                                                    c_name_obj[index].setAttribute('placeholder', '');
+                                                    c_place_obj[index].setAttribute('disabled', true);
+                                                }
+                                                for(var index=0; index < emp_obj.length; index++){
+                                                    emp_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    emp_place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    emp_obj[index].setAttribute('disabled', true);
+                                                    emp_obj[index].setAttribute('placeholder', '');
+                                                    emp_place_obj[index].setAttribute('disabled', true);
+                                                }
+                                                for(var index=0; index < place_obj.length; index++){
+                                                    place_obj[index].className='txt-content w170 cl_ltgrey txtTransparent';
+                                                    place_obj[index].setAttribute('disabled', true);
+                                                    place_obj[index].setAttribute('placeholder', '');
+                                                }
+
+                                                $('#plswait').hide();
+                                                $('#comProf2').trigger('click');
+                                                $('#psudo_create').html('Create Memorial');
+                                                $('#psudo_create_div').css("display", "none");
+                                                var res = data;
+                                                $('#created_id').val(obits.mainid);
+                                                $('#user_id').val(res[0].userId);
+                                                if (data && data.length>0) {
+                                                    document.getElementById('bld').innerHTML = '<a class="psudo_btn bg_blue w70" style="padding: 5px 0;"><label class="broidnormal ft14 pointer" onclick="viewMemorial(\''+ res[0].userId+ '\');">View</label></a>';
+                                                    document.getElementById('viw_mem').innerHTML = '<a href="javascript: void(0);" class="psudo_btn broidnormal toUpper ft16 pointer" style="width: 150px; float: left;" onclick="viewMemorial(\''+ res[0].userId+ '\');">view memorial</a>';
+                                                }
+                                            },
+                                            error : function errormsg(data) {
+                                                if (data != null) {
+                                                    document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                                }
+                                            }
+                                        });
+                                    }
+                                },
+                                error : function errormsg(data) {
+                                    if (data != null) {
+                                        document.getElementById('bld').innerHTML = "Unable to create Memorial";
+                                    }
+                                }
+                            });
+                        }
+
+                    }
+                }
+            });
+            document.getElementById('bld2').innerHTML="";
+        } else {
+            document.getElementById('bld2').innerHTML = "Please check Privacy Policy and Terms of Agreement of Obitopedia.";
+        }
+    }
+
+    /*function is_related(){
+     if(document.getElementsByName("is_related")[0].checked==true){
+     document.getElementById("is_deceased").style.display="block";
+     document.getElementById("gen_curator").style.display="none";
+     }else{
+     document.getElementById("is_deceased").style.display="none";
+     document.getElementById("gen_curator").style.display="block";
+     }
+     }*/
+
+    function add_relationship(no) {
+
+        $('#addRelationship').remove();
+        $('#deleteRelationship_'+no).css("display","block");
+        $("#moreRelationship").append('<div id="delete_rel_row_'+(no+1)+'" style="clear:both; padding-top:05px;"><div class="flt w110">&nbsp;</div><div class="flt w300"><div class="styled-select" style="width: 240px;"><select name="relationship_type" class="broidnormal ft13"><option value="0">Relationship</option><option value="mother">Mother</option><option value="father">Father</option><option value="wife">Wife</option><option value="husband">Husband</option><option value="partner">Partner</option><option value="daughter">Daughter</option><option value="son">Son</option><option value="sister">Sister</option><option value="brother">Brother</option><option value="daughterinlaw">Daughter-in-law</option><option value="soninlaw">Son-in-law</option><option value="grandmother">Grandmother</option><option value="grandfather">Grandfather</option><option value="aunt">Aunt</option><option value="uncle">Uncle</option><option value="cousin">Cousin</option><option value="niece">Niece</option><option value="nephew">Nephew</option><option value="granddaughter">Granddaughter</option><option value="grandson">Grandson</option><option value="greategranddaughter">Great Granddaughter</option><option value="greategrandson">Great Grandson</option><option value="greatgrandmother">Great Grandmother</option><option value="greatgrandfather">Great Grandfather</option><option value="motherinlaw">Mother-in-law</option><option value="fatherinlaw">Father-in-law</option><option value="brotherinlaw">Brother-in-law</option><option value="sisterinlaw">Sister-in-law</option><option value="friend">Friend</option><option value="neighbour">Neighbour</option><option value="student">Student</option><option value="teacher">Teacher</option><option value="colleague">Colleague</option></select></div></div><div class="flt"><input type="text" class="txt-content" style="width: 212px;" name="relationship_name" value="" placeholder=\'Name\'></div><div id="deleteRelationship_'+(no+1)+'" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_relationship('+(no+1)+');"><img src="images/delete-button.png"></label></div><div id="addRelationship" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_relationship('+(no+1)+');"><img src="images/addmore.png"></label></div>');
+    }
+    function delete_relationship(no) {
+        $('#delete_rel_row_'+no).remove();
+    }
+
+    function add_school(id) {
+
+        $('#addSchool').remove();
+        $('#deleteSchool_'+id).css("display","block");
+        $("#moreSchool").append('<div id="delete_school_row_'+(id+1)+'" style="clear: both; padding-top:05px;"><div style="float:left;" class="w300"><input type="text" name="school_name" class="txt-content" style="width: 235px;" value="" placeholder=\'Name of School\'></div><div style="float:left;"><input type="text" name="school_place" id="school_place_'+(id+1)+'" class="txt-content" style="width: 212px;" value="" placeholder=\'Place\' onclick="schoolPlace('+(id+1)+')"></div><div id="deleteSchool_'+(id+1)+'" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_school('+(id+1)+');"><img src="images/delete-button.png"></label></div><div id="addSchool" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_school('+(id+1)+');"><img src="images/addmore.png"></label></div></div>');
+    }
+    function delete_school(id) {
+        $('#delete_school_row_'+id).remove();
+    }
+
+
+    function add_college(id) {
+
+        $('#addCollege').remove();
+        $('#deleteCollege_'+id).css("display","block");
+        $("#moreCollege").append('<div id="delete_college_row_'+(id+1)+'" style="clear:both; padding-top:05px;"><div style="float:left;" class="w300"><input type="text" name="college_name" class="txt-content" style="width: 235px;" value="" placeholder=\'Name of the College\'></div><div style="float:left;"><input type="text" name="college_place" id="college_place_'+(id+1)+'" class="txt-content" style="width: 212px;" value="" placeholder=\'Place\' onclick="collegePlace('+(id+1)+')"></div><div id="deleteCollege_'+(id+1)+'" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_college('+(id+1)+');"><img src="images/delete-button.png"></label></div><div id="addCollege" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_college('+(id+1)+');"><img src="images/addmore.png"></label></div></div>');
+    }
+    function delete_college(id) {
+        $('#delete_college_row_'+id).remove();
+    }
+
+    function add_employer(id) {
+
+        $('#addEmployer').remove();
+        $('#deleteEmployer_'+id).css("display","block");
+        $("#moreEmployer").append('<div id="delete_employer_row_'+(id+1)+'" style="clear: both; padding-top:05px;"><div style="float:left;" class="w300"><input type="text" name="employer" class="txt-content" style="width: 235px;" placeholder=\'Name of the Company/ Firm/ Employer\'></div><div style="float:left;"><input type="text" name="employer_place" id="employer_place_'+(id+1)+'" class="txt-content" style="width: 212px;" value="" placeholder=\'Place\' onclick="employeePlace('+(id+1)+')"></div><div id="deleteEmployer_'+(id+1)+'" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_employer('+(id+1)+');"><img src="images/delete-button.png"></label></div><div id="addEmployer" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_employer('+(id+1)+');"><img src="images/addmore.png"></label></div></div>');
+    }
+    function delete_employer(id) {
+        $('#delete_employer_row_'+id).remove();
+    }
+
+    function add_lived(id) {
+
+        $('#addLived').remove();
+        $('#deleteLived_'+id).css("display","block");
+        $("#moreLived").append('<div  id="delete_lived_row_'+(id+1)+'" style="clear: both; padding-top:05px;"><div style="float:left;"><input type="text" name="lived" id="lived_'+(id+1)+'" class="txt-content" style="width: 512px;" placeholder=\'Prospect Heights, Brooklyn, New York.\' onclick="placeLived('+(id+1)+')"></div><div id="deleteLived_'+(id+1)+'" style="float:left; padding-left: 10px; margin-top: 05px; display: none;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="delete_lived('+(id+1)+');"><img src="images/delete-button.png"></label></div><div id="addLived" style="float:left; padding-left: 10px; margin-top: 05px;"><label class="broidnormal ft11 cl_blue" style="cursor: pointer;" onclick="add_lived('+(id+1)+');"><img src="images/addmore.png"></label></div>');
+    }
+    function delete_lived(id) {
+        $('#delete_lived_row_'+id).remove();
+    }
+
+    function show_email_login() {
+        document.getElementById('social-log').style.display = "none";
+        document.getElementById('email-log').style.display = "block";
+
+    }
+
+    function hide_email_login() {
+        document.getElementById('social-log').style.display = "block";
+        document.getElementById('email-log').style.display = "none";
+
+    }
+    function viewMemorial(uname) {
+        window.location = "/memorial/"+uname;
+    }
+
+    memorialTabs('feat-mem');
+    function memorialTabs(id) {
+
+        $("#feat-mem").removeClass("bg_blue bgcl_white cl_white cl_grey br_grey br_blue");
+        $("#fav-mem").removeClass("bg_blue bgcl_white cl_white cl_grey br_grey br_blue");
+        $("#curr-mem").removeClass("bg_blue bgcl_white cl_white cl_grey br_grey br_blue");
+
+
+        if (id == "feat-mem") {
+            $("#feat-mem").addClass("bg_blue cl_white br_blue");
+            $("#fav-mem").addClass("bgcl_white cl_grey br_grey");
+            $("#curr-mem").addClass("bgcl_white cl_grey br_grey");
+
+            document.getElementById('load-memorial-details').src = "../home/feat-memorials.html";
+        } else if (id == "fav-mem") {
+            $("#feat-mem").addClass("bgcl_white cl_grey br_grey");
+            $("#fav-mem").addClass("bg_blue cl_white br_blue");
+            $("#curr-mem").addClass("bgcl_white cl_grey br_grey");
+
+            document.getElementById('load-memorial-details').src = "../home/fav-memorials.html";
+        } else if (id == "curr-mem") {
+            $("#feat-mem").addClass("bgcl_white cl_grey br_grey");
+            $("#fav-mem").addClass("bgcl_white cl_grey br_grey");
+            $("#curr-mem").addClass("bg_blue cl_white br_blue br_grey");
+
+            document.getElementById('load-memorial-details').src = "../home/curr-memorials.html?email=";
+        }
+
+    }
+
+    $(document).ready(function(){
+        $("#home_1 img").addClass("homeselected");
+        $("#home_1 span").addClass("cl_blue_hover");
+
+
+        $("#feat-mem").mouseover(function(){
+            $("#feat-mem").css("background-color", "#3197c6");
+            $("#feat-mem").css("color", "#ffffff");
+            $("#feat-mem").css("border", "2px solid #3197c6");
+        });
+        $("#feat-mem").mouseout(function(){
+            $("#feat-mem").css("background-color", "");
+            $("#feat-mem").css("color", "");
+            $("#feat-mem").css("border", "");
+        });
+        $("#fav-mem").mouseover(function(){
+            $("#fav-mem").css("background-color", "#3197c6");
+            $("#fav-mem").css("color", "#ffffff");
+            $("#fav-mem").css("border", "2px solid #3197c6");
+        });
+        $("#fav-mem").mouseout(function(){
+            $("#fav-mem").css("background-color", "");
+            $("#fav-mem").css("color", "");
+            $("#fav-mem").css("border", "");
+        });
+        $("#curr-mem").mouseover(function(){
+            $("#curr-mem").css("background-color", "#3197c6");
+            $("#curr-mem").css("color", "#ffffff");
+            $("#curr-mem").css("border", "2px solid #3197c6");
+        });
+        $("#curr-mem").mouseout(function(){
+            $("#curr-mem").css("background-color", "");
+            $("#curr-mem").css("color", "");
+            $("#curr-mem").css("border", "");
+        });
+        $(".create_btn").mouseover(function(){
+            $("#r_arrow").addClass("create_dwn_btn_1");
+            $("#l_arrow").addClass("create_dwn_btn_1");
+        });
+        $(".create_btn").mouseout(function(){
+            $("#r_arrow").removeClass("create_dwn_btn_1");
+            $("#l_arrow").removeClass("create_dwn_btn_1");
+        });
+
+        var scroll_flag=false;
+        var count = 0;
+        var all_length = 0;
+        var last_id = "";
+        var obits_pop={};
+        obits_pop.status="popular";
+        obits_pop._id="";
+        $.ajax({
+            //url : '/obits/'+_id,
+            url : '/homememorials',
+            data : obits_pop,
+            type : "POST",
+            success : function(data) {
+                loadmemorials(data,"");
+            },
+            error : function errormsg(data) {
+                if (data != null) {
+                }
+            }
+        });
+
+        function loadmemorials(res, frmview){
+            if(res.length!=0){
+
+                var headerphoto = "";
+                var profilephoto = "";
+                var curatorCre = '';
+                var delay=300;
+                var hor_scroll = "";
+                var prof_div = "", prof_coordinates="", header_div = "", header_coordinates="";
+                var viewmoreflag = false;
+
+                var len =parseInt((res.length/3));
+                len = len*3;
+                if(len<res.length){
+                    viewmoreflag = true;
+                }
+                for(var i=0; i<len; i++){
+                    if(i==(len-1)){
+                        scroll_flag = true;
+                    }
+                    //i = j%2;
+                    //alert(JSON.stringify(res[i]));
+
+                    last_id = res[i]._id;
+                    count = res[i].no_of_counts;
+                    if(res[i].headerImg!="" && res[i].headerImg!= null){
+                        if(res[i].header_xy_pos){
+                            var ppic_percentage = (res[i].header_xy_pos.crop_width - 235) / res[i].header_xy_pos.crop_width;
+                            var img_width = res[i].header_xy_pos.natural_width - (res[i].header_xy_pos.natural_width * ppic_percentage);
+                            var img_height = res[i].header_xy_pos.natural_height - (res[i].header_xy_pos.natural_height * ppic_percentage);
+                            var x_pos = res[i].header_xy_pos.x - (res[i].header_xy_pos.x * ppic_percentage);
+                            var y_pos = res[i].header_xy_pos.y - (res[i].header_xy_pos.y * ppic_percentage);
+
+                            header_div = 'style="width: 235px; height: 155px; overflow:hidden; border-radius: 4px 4px 0 0;"';
+                            if(img_height-y_pos < 155){
+                                header_coordinates = 'style="width: '+img_width+'px; height: 155px; margin-left:'+(-x_pos)+'px;"';
+                            }else{
+                                header_coordinates = 'style="width: '+img_width+'px; height: '+img_height+'px; margin-left:'+(-x_pos)+'px; margin-top:'+(-y_pos)+'px;"';
+                            }
+                            headerphoto= res[i].headerImg;
+
+                        }else{
+                            header_div = '';
+                            header_coordinates = 'style="width: 235px; height: 155px; border: 4px 4px 0 0"';
+                            if(res[i].headerImg.indexOf("9-11.jpg")!=-1){
+                                var no = (i % 4)+1
+                                headerphoto = "../images/header_photo/9_11_"+ no +".jpg";
+                            }else if(res[i].headerImg.indexOf("ww1a.jpg")!=-1){
+                                var no = (i % 26)+1
+                                headerphoto = "../images/header_photo/world_war_"+ no +".jpg";
+                            }else{
+                                headerphoto= res[i].headerImg;
+                            }
+                        }
+                    }else{
+                        var no = Math.floor(Math.random() * 4) + 1;
+                        header_div = '';
+                        header_coordinates = 'style="width: 235px; height: 155px; border: 4px 4px 0 0"';
+                        headerphoto = "../images/header_photo/header_"+ no +".jpg";
+                    }
+                    if(res[i].photoImg!="" && res[i].photoImg!= null){
+                        if(res[i].xy_pos){
+                            var ppic_percentage = (res[i].xy_pos.crop_width - 86) / res[i].xy_pos.crop_width;
+                            var img_width = res[i].xy_pos.natural_width - (res[i].xy_pos.natural_width * ppic_percentage);
+                            var img_height = res[i].xy_pos.natural_height - (res[i].xy_pos.natural_height * ppic_percentage);
+                            var x_pos = res[i].xy_pos.x - (res[i].xy_pos.x * ppic_percentage);
+                            var y_pos = res[i].xy_pos.y - (res[i].xy_pos.y * ppic_percentage);
+
+                            prof_div = 'style="position: absolute; width: 84px; height: 84px; margin-left: 75px; overflow:hidden; border-radius: 50px; border: 3px solid #fff; z-index:1"';
+                            prof_coordinates = 'style="width: '+img_width+'px; height: '+img_height+'px; margin-left:'+(-x_pos)+'px; margin-top:'+(-y_pos)+'px;"';
+                            profilephoto= res[i].photoImg;
+
+                        }else{
+                            prof_div = 'style="position: absolute; margin-left: 75px;"';
+                            prof_coordinates = 'style="width: 84px; height: 84px; border: 3px solid #fff;"';
+                            profilephoto= res[i].photoImg;
+                        }
+                    }else{
+                        prof_div = 'style="position: absolute; margin-left: 75px;"';
+                        prof_coordinates = 'style="width: 84px; height: 84px; border: 3px solid #fff;"';
+                        profilephoto = "../images/profiles/prof_1.jpg";
+                    }
+                    var flower_count = 0;
+                    var diya_count = 0;
+                    var tribute_count = 0;
+                    if(res[i].flower){
+                        var flr = eval(res[i].flower);
+                        flower_count = flr.length;
+                    }
+                    if(res[i].diya){
+                        var diy = eval(res[i].diya);
+                        diya_count = diy.length;
+                    }
+                    /*if(res[i].tribute){
+                     var trib = eval(res[i].tribute);
+                     tribute_count = trib.length;
+                     }*/
+                    if(res[i].tributecnt){
+                        tribute_count = res[i].tributecnt;
+                    }
+                    var memorial_text = "";
+                    if(res[i].memText){
+                        if(res[i].memText.data && res[i].memText.data.length > 0){
+                            memorial_text = res[i].memText.data[0];
+                        }
+                    }else{
+                        memorial_text = "";
+                    }
+                    var marg_left = "margin-left: 14px;";
+                    if(all_length%3 == 0){
+                        curatorCre = curatorCre + '<div style="clear: both;"></div>';
+                        marg_left = "margin-left: 0;";
+                    }
+                    curatorCre = curatorCre + '<div class="owl-item" style="'+marg_left+' float: left; padding-bottom:14px; width: 235px;"><a href="../memorial/'+res[i].userId+'" class="rm_br cl_3e3e3e"><div onclick="load_profile(\''+res[i]._id+'\', \''+res[i].userId+'\')"><div class="owl-slide"><figure style="background: #EDF7F9;"><div class="top-image"'+ header_div +'><img src="'+headerphoto+'"'+ header_coordinates +' alt=""/></div>';
+                    curatorCre = curatorCre + '<div class="thumb-image"'+ prof_div +'><img src="'+profilephoto+'"'+ prof_coordinates +' alt=""/></div><figcaption><div><div class="broidserifbold toUpper ft14" style="margin-top: 65px; height:22px;"><label id="uname">'+res[i].uname+'</label></div>';
+                    curatorCre = curatorCre + '<div class="description">'+memorial_text+'</div></div></figcaption></figure></div>';
+                    curatorCre = curatorCre + '<div style="padding: 0 5px 5px 20px; background-color: #EDF7F9;"><div style="width:32%; margin: 0 4px 0 0; float:left; padding: 5px 0;" class="ft12"><img src="images/flower.png"><label class="flr_tri_lamp_cnt">'+flower_count+'</label></div><div style="width:32%; margin: 0; float:left; padding: 5px 0;" class="ft12"><img src="images/diya.png"/><label class="flr_tri_lamp_cnt">'+diya_count+'</label></div><div style="width:30%; margin: 0 6px 0 0; float:left; padding: 5px 0;" class="ft12"><img src="images/tribute.png"><label class="flr_tri_lamp_cnt">'+tribute_count+'</label></div><div style="clear: both;"></div></div></div></a></div>';
+
+                    all_length = all_length+1;
+                }
+                /* if(viewmoreflag) {
+                 curatorCre = curatorCre + '<div class="cbth toCap pointer" id="viemore" style="float:right; margin-right:10px;   margin-bottom: 8px;  margin-top: -10px; "> <a href="../popular" class=" pointer rm_br cl_blackk" style="width: 120px; padding: 10px 0;" target="_blank"><label class="broidnormal ft12 pointer">View More &gt;&gt;</label></a> </div>';
+                 } */
+
+                $('#popular_memorials').append(curatorCre);
+
+            }else{
+                if(frmview!=""){
+
+                }else{
+                    $('#popular_memorials').append('<div>&nbsp;</div>');
+                    $('#popular_memorials').append('<div class="broidnormal ft28" style="text-align: center; margin-top:150px;">No Popular Memories</div>');
+                }
+            }
+
+        }
+        function viewMore(){
+
+            var obits={};
+            obits.status="popular";
+            obits._id=last_id;
+            obits.count=count;
+            $.ajax({
+                //url : '/obits/'+_id,
+                url : '/memorials',
+                data : obits,
+                type : "POST",
+                success : function(data) {
+                    loadmemorials(data, "viewmore");
+                    $('#plswait').hide();
+                },
+                error : function errormsg(data) {
+                    if (data != null) {
+                    }
+                }
+            });
+        }
+
+        $(window).scroll(function() {
+            if (($(window).scrollTop()+10) >= ($(document).height() - $(window).height())) {
+                if(scroll_flag){
+                    scroll_flag = false;
+                    $('#plswait').show();
+                    setTimeout(function(){viewMore()}, 1000);
+                }
+            }
+        });
+    });
+
+
+</script>
+<script type="text/javascript" src="../dist/hello.all.js"></script>
+
+<script>
+    var memorial_text = 3000;
+    $(document).ready(function(){
+        $("#ppic img").mouseover(function(){
+            $("#deleteProImg").show();
+            $("#ppic img").css("opacity","0.7");
+        });
+        $("#ppic img").mouseout(function(){
+            $("#deleteProImg").hide();
+            $("#ppic img").css("opacity","1");
+        });
+        $("#deleteProImg").mouseover(function(){
+            $("#deleteProImg").show();
+            $("#ppic img").css("opacity","0.7");
+        });
+        $("#deleteProImg").mouseout(function(){
+            $("#deleteProImg").hide();
+            $("#ppic img").css("opacity","1");
+        });
+        $("#deleteProImg").click(function() {
+            $("#deleteProImg").hide();
+            $('#ppic').css("display","none")
+            $('#ppic img').attr("src","");
+        });
+
+    });
+    CKEDITOR.replace( 'editor1' );
+</script>
+<script type="text/javascript" src="js/menulinks.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+<script type="text/javascript" src="js/jquery.autocomplete.min.js"></script>
+</html>	
