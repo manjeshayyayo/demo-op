@@ -3,6 +3,10 @@ body{
     background:#328EBD;
 }
 
+.page-join {
+	padding:40px 20px;
+}
+
 .bor{
     border:solid 1px #ffffff;
 }
@@ -81,7 +85,7 @@ body{
     font-size:20px;
 }
 .form_div p{
-    color:#328EBD;
+    color:#71B0D2;
     font-family: 'DroidSans';
     font-size:13px;
     font-weight:bold;
