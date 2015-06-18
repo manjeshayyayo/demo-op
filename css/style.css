@@ -3,8 +3,21 @@ body{
     background:#328EBD;
 }
 
-.page-join {
+#page-join, #page-login {
 	padding:40px 20px;
+}
+
+#page-login .remember-me {
+	color:#fff;
+}
+
+#page-join .fa,
+#page-login .fa {
+	color: #696768;
+}
+
+.top-margin-30 {
+	margin-top: 30px;
 }
 
 .bor{
@@ -18,7 +31,7 @@ body{
     color:#328EBD;
     border:none;
     font-family: 'DroidSans';
-    border-radius:7px;
+    border-radius:5px;
     padding: 7px;
     font-size: 21px;
     text-shadow: none;
@@ -30,7 +43,7 @@ body{
     color:#ffffff;
     border:none;
     font-family: 'DroidSans';
-    border-radius:7px;
+    border-radius:5px;
     padding: 7px;
     font-size: 21px;
     text-shadow: none;
@@ -43,7 +56,8 @@ body{
 }
 .form_div{
     background:#ADD2E5;
-    border-radius:10px;
+    border-radius:5px;
+	padding: 0 10px;
 }
 .form_text{
     background:#DEECF5;
@@ -60,7 +74,7 @@ body{
     color:#ffffff;
     border:none;
     font-family: 'DroidSans';
-    border-radius:7px;
+    border-radius:5px;
     padding: 5px;
     font-size: 21px;
     text-shadow: none;
@@ -68,7 +82,7 @@ body{
     box-shadow: 1px 2px 0px #888888;
 }
 .mr_top{
-    margin-top:15px;
+    margin-top:10px;
 }
 
 .soc_btn{
