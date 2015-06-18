@@ -15,6 +15,74 @@ body{
 #page-login .fa {
 	color: #696768;
 }
+#page-homepage {
+	background:#C1DCE6;
+	padding-bottom: 20px;
+}
+.left_2, .left_1 {
+	overflow:hidden;
+}
+.memorial-slider figcaption{
+  width: 100%;
+  color: #3e3e3e;
+  font-family: 'DroidSerif';
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -ms-transition: -ms-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.memorial-slider  figure .top-image,
+.memorial-slider  figure .thumb-image {
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -ms-transition: -ms-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+
+}
+.owl-item{
+	width:375px !important;
+}
+
+.memorial-slider  figure:hover .top-image,
+.memorial-slider  figure:hover .thumb-image,
+.memorial-slider  figure.cs-hover .top-image,
+.memorial-slider  figure.cs-hover .thumb-image {
+  -webkit-transition: -webkit-transform 1.2s;
+  -moz-transition: -moz-transform 1.2s;
+  -ms-transition: -ms-transform 1.2s;
+  -o-transition: -o-transform 1.2s;
+  transition: transform 1.2s;
+
+  -webkit-transform: translateY(-105%);
+  -moz-transform: translateY(-105%);
+  -ms-transform: translateY(-105%);
+  -o-transform: translateY(-105%);
+  transform: translateY(-105%);
+}
+
+.memorial-slider  figure:hover figcaption,
+.memorial-slider  figure.cs-hover figcaption {
+  -webkit-transform: translateY(-65px);
+  -moz-transform: translateY(-65px);
+  -ms-transform: translateY(-65px);
+  -o-transform: translateY(-65px);
+  transform: translateY(-65px);
+  -webkit-transition: -webkit-transform 1.2s;
+  -moz-transition: -moz-transform 1.2s;
+  -o-transition: -o-transform 1.2s;
+  -ms-transition: -ms-transform 1.2s;
+  transition: transform 1.2s;
+}
+.padding-200 {
+	padding-top:50px;
+}
+.memorial-slider {
+  
+}
+
 
 .top-margin-30 {
 	margin-top: 30px;
@@ -132,7 +200,9 @@ hr{
 
 }
 .left_2, .left_1{
-    margin-top:8px;
+     margin-top: 8px;
+  border-bottom: 2px solid #71B1D1;
+  min-height: 420px !important;
 }
 .left_1 h4, .left_2 h4 {
     color:#5D6164;
@@ -156,20 +226,38 @@ hr{
 }
 
 .liimg{
-    background:#E4EEF0;
-    border-top:solid 2px #C1DCE7;
-    border-right:solid 2px #C1DCE7;
-
+    background: #E4EEF0;
+	min-height: 43px;
 }
+	
+.liimg {
+  border-right: 2px solid #71B1D1;
+  padding-top: 5px;
+  position:relative;
+}
+
+span.hit-count {
+  position: absolute;
+  font-weight: bold;
+  left: 76px;
+  top: 16px;
+}
+
+.liimg:last-child {
+  border-right: 0px;
+}
+
+
 .top_mar{
     margin-top: -32px;
     border-radius: 78px;
 }
 .head{
-    background:#328EBD;
-    padding:10px;
-    color:#ffffff;
-    border-radius:8px;
+    background: #328EBD;
+	padding: 10px;
+	color: #ffffff;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 .head h1{
 
@@ -186,15 +274,16 @@ hr{
     color:#ffffff;
     background:#328EBD;
     padding:10px;
-    border-radius:8px;
+    border-radius:5px;
     margin-top:5px;
 }
 .slide{
     margin-top:10px;
 }
 .logo{
-    background:url('../images/menu_logo.png') no-repeat;
-    height:50px;
+    background: url('../images/menu_logo.png') no-repeat;
+	padding: 20px;
+
 }
 
 .sl{
@@ -246,7 +335,7 @@ hr{
 .txt_area{
     margin-top:10px;
     background:#E6F1F5;
-    border-radius:8px;
+    border-radius:5px;
     color:#3E3D3D;
     font-family: 'DroidSans';
     font-size:18px;
@@ -423,7 +512,7 @@ hr{
     color:#ffffff;
     border:none;
     font-family: 'DroidSans';
-    border-radius:7px;
+    border-radius:5px;
     padding: 3px;
     font-size: 18px;
     text-shadow: none;
@@ -436,7 +525,7 @@ hr{
     color:#ffffff;
     border:none;
     font-family: 'DroidSans';
-    border-radius:7px;
+    border-radius:5px;
     padding: 3px;
     font-size: 13px;
     text-shadow: none;
@@ -626,7 +715,7 @@ p.foot{
     color: #ffffff;
     border: none;
     font-family: 'DroidSans';
-    border-radius: 7px;
+    border-radius: 5px;
     padding: 2px;
     font-size: 16px;
     text-shadow: none;
@@ -657,7 +746,7 @@ p.foot{
     color: #ffffff;
     border: none;
     font-family: 'DroidSans';
-    border-radius: 7px;
+    border-radius: 5px;
     padding: 1px;
     font-size: 17px;
     text-shadow: none;
@@ -708,7 +797,7 @@ p.foot{
     color: #ffffff;
     border: none;
     font-family: 'DroidSans';
-    border-radius: 7px;
+    border-radius: 5px;
     padding: 5px;
     font-size: 11px;
     text-shadow: none;
