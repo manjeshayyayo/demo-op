@@ -95,10 +95,90 @@ body{
 .top-margin-30 {
     margin-top: 30px;
 }
-/* 32_message_3 */
+
+#page-message-2,
 #page-message-3 {
     background:#B8D3DE;
 }
+/* 31_message_2 */
+#page-message-2 .messages {
+    background:#E6F1F5;
+    padding:10px;
+    color:#3284B3;
+    margin-top:15px;
+    font-size: 26px;
+}
+#page-message-2 .messages-block {
+    margin: 0 15px 15px 15px;
+    border: 2px solid #86B5CF;
+    border-radius: 5px;
+    background: #E4EDF2;
+    display: inline-block;
+}
+
+#page-message-2 .message-body {
+    border-bottom: 2px solid #86B5CF;
+    padding: 25px;
+}
+
+#page-message-2 .messages-block .message-body:last-child {
+    border-bottom: 0;
+}
+
+#page-message-2 .message-description {
+	font-size:26px;
+    line-height: 130%;
+}
+
+#page-message-2 .message-description img.half {
+    margin-top:15px;
+    width:49%;
+}
+
+#page-message-2 .message-description img.full {
+    margin-top:15px;
+    width:99%;
+}
+
+#page-message-2 .author {
+    padding-top:55px;
+}
+
+#page-message-2 .message-head img {
+    margin-right:15px;
+    float:left;
+}
+
+#page-message-2 .author h5 {
+    font-family: 'DroidSans';
+    font-size: 16px;
+    color: #3E3D3D;
+    font-weight: bold;
+    margin-bottom:5px;
+}
+
+#page-message-2 .author p {
+    font-family: 'DroidSans';
+    font-size: 14px;
+    color: #3E3D3D;
+}
+
+#page-message-2 .table-type-blocks {
+    background: #E4EDF2;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 7px 15px;
+}
+
+#page-message-2 .table-type-blocks span {
+    width: 49%;
+    display: inline-block;
+}
+
+/* 32_message_3 */
+
 
 #page-message-3  .to {
 	background:#fff;
@@ -111,7 +191,7 @@ body{
 	color:#434A54;
 }
 
-#page-message-3 .logo {
+.logo {
     float:left
 }
 
@@ -125,10 +205,6 @@ body{
 }
 
 
-#page-message-2 {
-	background:#E6F1F5;
-    padding: 0 15px;
-}
 
 
 ::-webkit-input-placeholder { color:#000!important;font-family: 'DroidSans';font-weight:bold; }
@@ -352,7 +428,6 @@ span.hit-count {
     float:right;
 }
 .abt{
-
     background:#E6F1F5;
     margin-top:8px;
 }
@@ -445,20 +520,7 @@ span.hit-count {
     margin-top: 8px;
     padding-right: 12px;
 }
-.head_text h5{
-    font-family: 'DroidSans';
-    font-size:20px;
-    color:#3E3D3D;
-    padding:4px;
 
-}
-.head_text p{
-    font-family: 'DroidSans';
-    font-size:18px;
-    color:#3E3D3D;
-    padding:4px;
-
-}
 .abt_icon{
     font-size: 21px;
     color: #3E3D3D;
@@ -798,8 +860,7 @@ p.foot{
     background:#B8D3DE;
 
 }
-.slide_28{
-    padding: 12px;
+.slide_28 {
     margin-top: 0px;
     background:#B8D3DE;
 }
@@ -843,6 +904,32 @@ p.foot{
     margin-top:5px;
     margin-bottom:10px;
 }
+
+.head_text h5{
+    font-family: 'DroidSans';
+    font-size: 15px;
+    color: #3E3D3D;
+    padding: 0px;
+    font-weight: bold;
+	/*
+	font-family: 'DroidSans';
+    font-size:20px;
+    color:#3E3D3D;
+    padding:4px;*/
+
+}
+.head_text p{
+    font-family: 'DroidSans';
+    font-size:18px;
+    color:#3E3D3D;
+    padding:4px;
+	/* font-family: 'DroidSans';
+    font-size: 12px;
+    color: #3E3D3D;
+    padding: 0px;*/
+
+}
+/*
 .head_text_31 h5{
     font-family: 'DroidSans';
     font-size: 15px;
@@ -856,7 +943,7 @@ p.foot{
     color: #3E3D3D;
     padding: 0px;
 }
-
+*/
 .bor_less_31{
     background: #328EBD;
     color: #ffffff;
@@ -866,8 +953,9 @@ p.foot{
     padding: 7px;
     font-size: 17px;
     text-shadow: none;
-    width: 76px;
+    min-width: 76px;
     box-shadow: 1px 2px 0px #888888;
+    margin:15px;
 }
 .glyph_31{
     font-size:14px;
@@ -879,6 +967,7 @@ p.foot{
     border-radius:5px;
 
 }
+
 
 .txt_ar_31 p{
     color: #5D6164;
