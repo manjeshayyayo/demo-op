@@ -19,6 +19,11 @@ body{
     background:#C1DCE6;
     padding-bottom: 20px;
 }
+
+.page-container {
+    padding-left:15px;
+    padding-right:15px;
+}
 .left_2, .left_1 {
     overflow:hidden;
 }
@@ -84,34 +89,45 @@ body{
 
 }
 
-
+.head div {
+    text-align:center;
+}
 .top-margin-30 {
     margin-top: 30px;
 }
 /* 32_message_3 */
+#page-message-3 {
+    background:#B8D3DE;
+}
+
 #page-message-3  .to {
 	background:#fff;
 	padding:10px;
+    border-top:2px solid #C1C1C1;
+    border-bottom:2px solid #C1C1C1;
 }
 #page-message-3  .photo {
 	font-weight:bold;
 	color:#434A54;
 }
 
+#page-message-3 .logo {
+    float:left
+}
+
 #page-message-3 .heading{
 	background:#E4EDF2;
 	padding:10px;
 	font-size:18px;
-	border-top:2px solid #C1C1C1;
-	border-bottom:2px solid #C1C1C1;
+    border-top: 1px solid #B8D3DE;
+    border-bottom: 1px solid #B8D3DE;
 	font-weight:bold;
 }
 
-#page-message-3 {
-	background:#B8D3DE
-}
+
 #page-message-2 {
 	background:#E6F1F5;
+    padding: 0 15px;
 }
 
 
@@ -288,8 +304,9 @@ span.hit-count {
     background: #328EBD;
     padding: 10px;
     color: #ffffff;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom:15px;
 }
 .head h1{
 
@@ -314,8 +331,7 @@ span.hit-count {
 }
 .logo{
     background: url('../images/menu_logo.png') no-repeat;
-    height: 25px;
-    /* padding: 19px; */
+    padding: 19px;
     background-size: contain;
 }
 
