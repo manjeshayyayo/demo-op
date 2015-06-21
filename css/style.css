@@ -227,17 +227,23 @@ input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-wei
 #page-message-1 .table-type-blocks span:last-child{
 	text-align:right;
 }
-
+#page-notification-1 .footer p,
+#page-notification-2 .footer p,
 #page-message-1 .footer p{
   padding: 10px;
   color: #3286B4;
   font-size: 18px;
 }
-  
+
+#page-notification-1 .abt_cont,
+#page-notification-2 .abt_cont{
+	background:  #E4EDF2;
+}
+
 #page-notification-2 {
 	background:#B8D3DE;  
 }
-
+#page-notification-1  .header-one,
 #page-notification-2 .header-one {
 	margin-bottom:15px;
 }
@@ -858,6 +864,7 @@ h4{
 	line-height: 100%;
 	position:relative;
 }
+#page-notification-1   .span_desc,
 #page-notification-2 .span_desc{
     font-family: 'DroidSans';
 	color: #434A54;
@@ -866,6 +873,7 @@ h4{
 	line-height: 100%;
 	position:relative;
 }
+#page-notification-1   .span_desc_dull,
 #page-notification-2 .span_desc_dull{
 	font-family: 'DroidSans';
 	color: #81807E;
@@ -874,6 +882,14 @@ h4{
 	line-height: 116%;
 	position: relative
 }
+
+#page-notification-1 {
+	background: #B8D3DE;
+}
+.notification-body {
+	margin-top:15px;
+}
+
 .approve-here {
 	text-decoration:none;
 	color:#4A92BA;
@@ -889,6 +905,7 @@ h4{
 }
 .abt_cont{
     background:#B8D3DE;
+	padding: 20px;
 }
 .abt_cont_30{
     background:#B8D3DE;
