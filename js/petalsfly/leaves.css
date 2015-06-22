@@ -1,0 +1,8 @@
+#petalContainer
+{
+    position: absolute;
+    width: 520px;
+    height: 320px;
+    top:70px;
+    overflow: hidden;
+}
