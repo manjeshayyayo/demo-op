@@ -1,226 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OP</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body style="background:#E6F1F5">
-<script src="lib/jquery/1.11.2/jquery.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-xs-12  ">
-            <div class="col-sm-12 col-xs-12 head">
-
-                <div class="col-xs-2 col-sm-2 logo">  </div>
-                <div class="col-xs-10 col-sm-10"><h1 class="text-center">OBITOPEDIA</h1></div>
-
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>OP</title>
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="css/style.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body id="page-main-background-2">
+      <script src="lib/jquery/1.11.2/jquery.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+      <div class="col-sm-12 col-xs-12  ">
+         <div class="col-sm-12 col-xs-12 head">
+            <div class="col-xs-2 col-sm-2 logo">  </div>
+            <div class="col-xs-10 col-sm-10">
+               <img src="images/head_logo2.png" class="img-responsive head-logo">
             </div>
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-xs-12 slide">
-            <img src="images/slide.png" class="img-responsive" style="width:100%">
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12 col-xs-12 ">
-            <div class="col-sm-12 col-xs-12 abt">
-                <h4>FEEDBACK</h4>
+         </div>
+      </div>
+      <div class="col-sm-12 col-xs-12 slide">
+         <img src="images/slide.png" class="img-responsive" style="width:100%">
+      </div>
+      <div class="col-sm-12 col-xs-12 abt">
+         <h4 class="sub-head">FEEDBACK</h4>
+      </div>
+      <div class="col-sm-12 col-xs-12 ">
+         <form>
+            <div class="form-group first-form">
+               <label for="exampleInputPassword1">Name<sup>*</sup></label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" />
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
             </div>
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-sm-12 col-xs-12">
-            <div class="col-sm-12 col-xs-12 abt_cont">
-                <div class="col-sm-12 col-xs-12 frm_cont">
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Name<sup>*</sup></label>
-                            <input type="email" class="form-control back" id="exampleInputEmail1" >
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Remembered as<sup>*</sup></label>
-                            <input type="password" class="form-control back" id="exampleInputPassword1" placeholder="A loveing wife and mother">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Upload Profile Picture</label>
-                            <img src="images/user.png" class="img-responsive" style="margin-top: 11px;">
-                            <button class="btn btn-default bor_less_sub_2" >Upload Photo</button>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="inputGroupSuccess1">Customize Memorial Header</label>
-                            <label class="nor_label">Select from the theme below</label>
-                            <ul class="list-inline list-unstyled">
-                                <li><img src="images/cm1.png" class="img-responsive"></li>
-                                <li><img src="images/cm2.png" class="img-responsive"></li>
-                                <li><img src="images/cm3.png" class="img-responsive"></li>
-                                <li><img src="images/cm4.png" class="img-responsive"></li>
-                            </ul>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Upload from my collection</label>
-
-
-                        </div>
-                        <button class="btn btn-default bor_less_sub_2" style="  margin-bottom: 16px;">Upload Photo</button>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Born On</label>
-                            <div class="inner-addon left-addon">
-
-                                <i class="glyphicon glyphicon-calendar"></i>
-                                <input type="text" class="form-control back_1" />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Died On</label>
-                            <div class="inner-addon left-addon">
-
-                                <i class="glyphicon glyphicon-calendar"></i>
-                                <input type="text" class="form-control back_1 " />
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Place of Birth</label>
-                            <input type="email" class="form-control back" id="exampleInputEmail1" placeholder="Nathasha John">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Memorial Text<sup>*</sup></label>
-                            <select name="colors" class="form-control back">
-                                <option value="Engish">English</option>
-                                <option value="lang2">lang2</option>
-
-
-                            </select>
-                            <textarea class="form-control back" rows="4" placeholder="Write text here.. "></textarea>
-                        </div>
-                        <div class="row col-sm-4 col-xs-4 form-group">
-                            <label for="exampleInputPassword1">Relationship<sup>*</sup></label>
-                            <img src="images/user.png" class="img-responsive" style="margin-top: 11px;">
-
-                        </div>
-                        <div class="row col-sm-4 col-xs-8  form-group " style="margin-left: 43px;">
-                            <label for="exampleInputPassword1">MADDY CROWELL<sup>*</sup></label>
-                            <select name="colors" class="form-control back">
-                                <option value="Engish">General Curator</option>
-                                <option value="lang2">lang2</option>
-
-
-                            </select>
-
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="form-group">
-
-                            <label for="exampleInputEmail1" style="font-size:14px">Add Family & Friends of the Departed</label>
-                            <select name="colors" class="form-control back">
-                                <option value="Engish">Relationship</option>
-
-
-
-                            </select>
-                            <div class="input-group">
-
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Place">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-plus"></i></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Family Name</label>
-                            <input type="email" class="form-control back" id="exampleInputEmail1" placeholder="Name of Family">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAmount">School(s)</label>
-
-                            <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Name of School">
-                            <div class="input-group">
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Place">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-remove"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-
-
-                            <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Name of School">
-                            <div class="input-group">
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Place">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-plus"></i></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAmount">College(s)</label>
-
-                            <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Name of College">
-                            <div class="input-group">
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Place">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-plus"></i></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAmount">EMPLOYER(S)</label>
-
-                            <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Name of Company/Firm/Employes">
-                            <div class="input-group">
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Place">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-plus"></i></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputAmount">Place(s) Lived</label>
-
-                            <div class="input-group">
-                                <input type="text" class="form-control back" id="exampleInputAmount" placeholder="Prospect Heights,Brooklyn, New york">
-                                <div class="input-group-addon calc_btn"><i class="glyphicon glyphicon-plus"></i></div>
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputAmount">Memorial Setting</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" checked> Public(Everyone can see)
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" > Private(Only those I add can see)
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox" checked> I have read, understand and agree to the Privacy and Terms of Agreement of Obitopedia.
-                                </label>
-                            </div>
-
-                        </div>
-                    </form>
-                    <div class="col-xs-12 col-sm-12 red_label"><label class="red_label"><sup>*</sup>All boxes marked with the star are compulsory</label></div>
-                    <button class="btn btn-default bor_less_sub_3">PREVIEW</button>
-                    <button class="btn btn-default bor_less_sub_3" style="width:133px" >CREATE MEMORIAL</button>
-
-
-                </div>
-
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Remembered as<sup>*</sup></label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="A loveing wife and mother"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
             </div>
-        </div>
-    </div>
-</div>
-</body>
+            <div class="form-group">
+               <label for="exampleInputPassword1">Upload Profile Picture</label>
+               <img src="images/user.png" class="img-responsive" style="margin-top: 11px;">
+               <button class="btn btn-default bor_less_sub_2" >Upload Photo</button>
+            </div>
+            <label class="nor_label-1" for="inputGroupSuccess1">Customize Memorial Header</label><br>
+            <label class="nor_label-2">Select from the theme below</label>
+            <div class="row">
+               <div class="col-sm-3 col-xs-3 col-md-3 img-responsive">
+                  <img src="images/cm1.png" class="img-responsive">
+               </div>
+               <div class="col-sm-3 col-xs-3 col-md-3 img-responsive">
+                  <img src="images/cm2.png" class="img-responsive">
+               </div>
+               <div class="col-sm-3 col-xs-3 col-md-3 img-responsive">
+                  <img src="images/cm3.png" class="img-responsive">
+               </div>
+               <div class="col-sm-3 col-xs-3 col-md-3 img-responsive">
+                  <img src="images/cm4.png" class="img-responsive">
+               </div>
+            </div>
+            <label for="exampleInputPassword1" class="nor_label-2">Upload from my collection</label><br>
+            <button class="btn btn-default bor_less_sub_2" style="  margin-bottom: 16px;">Upload Photo</button>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Born On</label>
+               <div class="row  inner-addon left-addon">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <i class="glyphicon glyphicon-calendar glyph-margin"></i>
+                  <input type="text" class="form-control back_1" />
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Died On</label>
+               <div class="row  inner-addon left-addon">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <i class="glyphicon glyphicon-calendar glyph-margin"></i>
+                  <input type="text" class="form-control back_1" />
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Place of Birth</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Enter a location"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Place of Death</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Enter a location"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-btm">
+               <label for="exampleInputEmail1">Memorial Text<sup>*</sup></label>
+               <div class="row  span_desc">
+                  <span class="col-sm-6 col-xs-6 "> 
+                  <span class="time_span">
+                     <select name="colors" class="form-control back_1 back-text">
+                        <option value="Engish">English</option>
+                        <option value="lang2">lang2</option>
+                     </select>
+                  </span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top-2">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <textarea class="form-control back" rows="4" placeholder="Write text here.. "></textarea>
+                  </span>
+               </div>
+            </div>
+            <div class="row col-sm-4 col-xs-4 form-group">
+               <label for="exampleInputPassword1">Relationship<sup>*</sup></label>
+               <img src="images/user.png" class="img-responsive" style="margin-top: 11px;">
+            </div>
+            <div class="col-sm-4 col-xs-8 form-group ">
+               <label for="exampleInputEmail1">MADDY CROWELL<sup>*</sup></label>
+               <div class="row  span_desc">
+                  <span class="col-sm-12 col-xs-12 "> 
+                  <span class="time_span">
+                     <select name="colors" class="form-control back_1 back-text">
+                        <option value="Engish">General Curator</option>
+                     </select>
+                  </span>
+               </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group form-margin-btm">
+               <label for="exampleInputEmail1">Add Family & Friends of the Departed <sup>*</sup></label>
+               <div class="row  span_desc">
+                  <span class="col-sm-6 col-xs-6 ">
+                     <span class="time_span">
+                        <select name="colors" class="form-control back_1 back-text">
+                           <option value="Engish">Relationship</option>
+                        </select>
+                     </span>
+                  </span>
+                  <span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top-2">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Place"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/addmore.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Family Name</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Name of Family"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1 span_glyph" ></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">School(s)</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Name of School"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Place"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/delete-button_.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Name of School"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Place"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/addmore.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">College(s)</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Name of College"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Place"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/addmore.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Employer(s)</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Name of Company/Firm/Employer"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ></span>
+               </div>
+            </div>
+            <div class="form-group form-margin-top">
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Place"/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/delete-button_.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group ">
+               <label for="exampleInputPassword1">Place(s)Lived</label>
+               <div class="row  span_desc">
+                  <span class="col-sm-11 col-xs-11 "> <span class="time_span">
+                  <input type="text" class="form-control back_1" placeholder="Prospect Heights,Brooklyn,New york "/>
+                  </span>
+                  </span><span class="col-sm-1 col-xs-1" ><img src="images/delete-button_.png" class="add-more"></span>
+               </div>
+            </div>
+            <div class="form-group">
+               <label for="exampleInputAmount">Memorial Setting</label>
+               <div class="radio">
+                  <label>
+                  <input type="radio" checked> Public(Everyone can see)
+                  </label>
+               </div>
+               <div class="radio">
+                  <label>
+                  <input type="radio" > Private(Only those I add can see)
+                  </label>
+               </div>
+               <div class="checkbox">
+                  <label>
+                  <input type="checkbox" checked> I have read, understand and agree to the Privacy and Terms of Agreement of Obitopedia.
+                  </label>
+               </div>
+            </div>
+         </form>
+         <div class="col-xs-12 col-sm-12 red_label"><label class="red_label"><sup>*</sup>All boxes marked with the star are compulsory</label></div>
+         <button class="btn btn-default bor_less_sub_3">PREVIEW</button>
+         <button class="btn btn-default bor_less_sub_3" style="width:133px" >CREATE MEMORIAL</button>
+      </div>
+   </body>
 </html>

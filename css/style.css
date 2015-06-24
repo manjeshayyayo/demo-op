@@ -1,7 +1,5 @@
 
-body{
-    background:#328EBD;
-}
+
 
 ::-webkit-input-placeholder { color:#B8BDC1!important;font-family: 'DroidSans';font-weight:bold; }
 ::-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans';font-weight:bold  } /* firefox 19+ */
@@ -203,7 +201,12 @@ input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-
 .logo {
     float:left
 }
-
+#page-main-background-1{
+    background:#BFD9E6;
+}
+#page-main-background-2{
+   background:#B8D3DE!important;
+}
 #page-message-3 .heading{
 	background:#E4EDF2;
 	padding:10px;
@@ -212,6 +215,7 @@ input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-
     border-bottom: 1px solid #B8D3DE;
 	font-weight:bold;
 }
+
 
 #page-message-1 .table-type-body {
 	background: #E4EDF2;
@@ -362,7 +366,7 @@ hr{
 .left_2, .left_1{
 
     margin-top: 8px;
-    border-bottom: 2px solid #71B1D1;
+
     min-height: 420px !important;
 
      margin-top: 8px;
@@ -758,8 +762,6 @@ p.cur-sec-para{
 .fa{
     background:#E6F1F5;
     border-radius: 3px;
-
-
 }
 .liimg1-full-bor{
     background:#E4EEF0;
@@ -776,7 +778,7 @@ p.cur-sec-para{
     margin-left: -26px;
     font-size: 15px;
 
-    border:solid 1px #328EBB;
+
     padding:9px;
 
 }
@@ -793,12 +795,12 @@ p.cur-sec-para{
     border-right:solid 2px #328EBB;
     border-top:solid 2px #328EBB;
      border-bottom:none;
-    padding:9px;
+    padding:3px;
 }
 .liimg-last{
     background:#E4EEF0;
        border-top:solid 2px #328EBB;
-    padding:10px;
+    padding:3px;
     
 }
 .li-social{
@@ -809,7 +811,7 @@ p.cur-sec-para{
 }
 .li-social a{
    color:#434955;
-    font-size:10px;
+    font-size:9px;
      font-family: 'DroidSans';
      background:none!important;
      text-decoration:none;
@@ -919,7 +921,7 @@ margin-left: -26px;
 }
 .radio label , .checkbox label{
     color:#626E7A;
-    font-size:10px;
+    font-size:14px;
     font-family: 'DroidSans';
     text-transform:none!important ;
 }
@@ -930,11 +932,19 @@ margin-left: -26px;
     padding: 10px;
     pointer-events: none;
 }
-.nor_label{
-    color:#626E7A;
-    font-size:12px;
-    font-family: 'DroidSans';
-    text-transform:none!important ;
+.nor_label-1{
+    color: #626E7A;
+  font-size: 22px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+  font-weight: normal
+}
+.nor_label-2{
+    color: #626E7A;
+  font-size:15px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+  font-weight: normal
 }
 
 /* align glyph */
@@ -952,7 +962,7 @@ margin-left: -26px;
 }
 .red_label{
     color:#F42134;
-    font-size:10px;
+    font-size:12px;
 }
 .input-group-addon {
     background:#E6F1F5;
@@ -1022,11 +1032,11 @@ h4{
 	font-size:24px;
 }
 
-.span_desc{
+span.span_desc{
     font-family: 'DroidSans';
 	color: #434A54;
 	font-size: 24px;
-	margin: 0px 20px 10px 10px;
+	  margin: 6px 0px -38px -3px;
 	line-height: 100%;
 	position:relative;
 }
@@ -1038,6 +1048,10 @@ h4{
 	margin: 0px 20px 10px 10px;
 	line-height: 100%;
 	position:relative;
+}
+.page-outer-div{
+    margin-top:-10px;
+
 }
 #page-notification-1   .span_desc_dull,
 #page-notification-2 .span_desc_dull{
@@ -1296,6 +1310,7 @@ p.foot{
     font-family: 'DroidSans';
     color:#5D6164;
     font-size:7px;
+    padding:0px;
 
 }
 .feedback-button{
@@ -1309,7 +1324,40 @@ p.foot{
   text-shadow: none;
   width: 80px;
 }
-
+label.form-label{
+    color: #626E7A;
+  font-size: 15px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+}
+.glyph-margin{
+    margin-left:15px;
+}
+.add-more{
+    margin-top:9px;
+}
+.form-margin-top{
+   margin-top: -14px;
+}
+.first-form{
+    margin-top:10px;
+}
+label{
+    margin-bottom: 0px!important
+}
+.form-margin-top-2{
+    margin-top:-24px;
+}
+.form-margin-btm{
+      margin-bottom: 25px;
+      border-radius:12px;
+}
+label.label-uppercase{
+    text-transform: uppercase
+}
+.back-text{
+    color:#9A9EA1
+}
 ::-webkit-input-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; }
 ::-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  } /* firefox 19+ */
 :-ms-input-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  } /* ie */
