@@ -207,6 +207,9 @@ input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-
 #page-main-background-2{
    background:#B8D3DE!important;
 }
+#page-main-background-3{
+   background:#B4D0DC!important;
+}
 #page-message-3 .heading{
 	background:#E4EDF2;
 	padding:10px;
@@ -685,7 +688,7 @@ h4.cur-h4-nor{
 h4.sub-head{
     font-family: 'DroidSans';
     color:#328DBD;
-    padding:2px;
+    padding:px;
     margin-left:0px;
     font-size:15px;
     font-weight:normal;
@@ -972,9 +975,13 @@ h4{
     margin-bottom: 6px;
 }
 .top_label{
-    padding-top: 12px;
+    padding-top: 0px;
     font-weight:bold;
 
+}
+.bottom-label{
+    padding-top:10px;
+    padding-bottom:10px;
 }
 .back_2{
     background: #E4EDF2;
@@ -1089,6 +1096,7 @@ span.span_desc{
 }
 .abt_cont_30{
     background:#B8D3DE;
+      padding: 11px;
 }
 .span_desc_dull{
     padding-bottom: 6px;
