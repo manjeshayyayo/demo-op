@@ -1523,9 +1523,26 @@ input:-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; 
 ;
 
 
-
+}
+.padding_p
+{
+    padding: 20px;
+}
+.set_height_p {
 
 }
+.size_p {
+font-size: 12px;
+}
+
+.img_p {
+    width:100%;
+}
+.margin_left_p
+{
+    margin-right: 60px;
+}
+
 .btm_mar
 {
 
@@ -1534,18 +1551,31 @@ input:-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; 
 }
 .curator_main h4{
     font-size:20px;
-    opacity:0.5;
+    opacity:01;
+    font-weight: bold;
+}
+.curator_opa{
+    font-size:20px;
+    opacity: 0.3;
+    font-weight: bold;
 }
 .curator_2{
     margin-top:0px;
+    width:15%;
 }
 .curator_3{
     background:url('../images/arrow.png')no-repeat;
     /*height:50px;
     /*background-size:cover;*/
     margin-bottom:20px;
-    margin-left: 30px;*/
+    margin-left: 30px;
 
+}
+.obit_font{
+  font-family:  DroidSans;
+    font-size: 30px;
+
+    font-weight: bold;
 }
 
 .curator{
@@ -1561,4 +1591,18 @@ input:-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; 
     margin-bottom:20px;
     height:50px;
     /*background-size:cover;*/
+}
+.share_p
+{
+    font-size: 25px;
+}
+.mercy_font
+{
+    opacity: 0.5;
+    font-weight: bold;
+}
+.super_script
+{
+    font-size: 10px;
+
 }
