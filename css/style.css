@@ -29,6 +29,15 @@ input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-
     background:#C1DCE6;
     padding-bottom: 20px;
 }
+
+#page-homepage .heading {
+    background-color: #268DB8;
+    border-radius: 5px;
+    color:#fff;
+    padding:10px;
+    margin-top: 15px;
+}
+
 #page-message-1{
 	background:#B8D3DE;
 }
