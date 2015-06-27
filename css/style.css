@@ -8,6 +8,11 @@ body{
 :-ms-input-placeholder { color:#000!important;font-family: 'DroidSans'; font-weight:bold } /* ie */
 input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-weight:bold }
 
+::-webkit-input-placeholder { color:#B8BDC1!important;font-family: 'DroidSans';font-weight:bold; }
+::-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans';font-weight:bold  } /* firefox 19+ */
+:-ms-input-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-weight:bold } /* ie */
+input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-weight:bold }
+
 #page-join, #page-login {
     padding:40px 20px;
 }
@@ -203,7 +208,15 @@ input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-wei
 .logo {
     float:left
 }
-
+#page-main-background-1{
+    background:#BFD9E6;
+}
+#page-main-background-2{
+   background:#B8D3DE!important;
+}
+#page-main-background-3{
+   background:#B4D0DC!important;
+}
 #page-message-3 .heading{
 	background:#E4EDF2;
 	padding:10px;
@@ -212,6 +225,7 @@ input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-wei
     border-bottom: 1px solid #B8D3DE;
 	font-weight:bold;
 }
+
 
 #page-message-1 .table-type-body {
 	background: #E4EDF2;
@@ -247,10 +261,6 @@ input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-wei
 #page-notification-2 .header-one {
 	margin-bottom:15px;
 }
-#page-searchpage-curator-2 {
-    background:#368CB4;
-}
-
 
 .bor{
     border:solid 1px #ffffff;
@@ -364,9 +374,15 @@ hr{
 
 }
 .left_2, .left_1{
+
     margin-top: 8px;
-    border-bottom: 2px solid #71B1D1;
+
     min-height: 420px !important;
+
+     margin-top: 8px;
+
+  min-height: 420px !important;
+
 }
 .left_1 h4, .left_2 h4 {
     color:#5D6164;
@@ -374,7 +390,7 @@ hr{
     font-size:18px;
 }
 .left_1 p, .left_2 p {
-    color:#5D6164;
+    color: rgb(62, 62, 62);
     font-family: 'DroidSans';
     font-size:15px;
     padding:25px;
@@ -417,12 +433,19 @@ span.hit-count {
     border-radius: 78px;
 }
 .head{
-    background: #2784AF;
+    background: #328EBD;
+
     padding: 10px;
     color: #ffffff;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     margin-bottom:15px;
+
+	padding: 10px;
+	color: #ffffff;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
 }
 .head h1{
 
@@ -443,16 +466,27 @@ span.hit-count {
     margin-top:5px;
 }
 .slide{
-    margin-top:10px;
+    margin-top:-10px;
 }
 .logo{
     background: url('../images/menu_logo.png') no-repeat;
-    padding: 19px;
+
+ 
     background-size: contain;
+
+  height: 23px;
+  /* padding: 19px; */
+
+
 }
 
 .head-logo{
     margin-left: 35px;
+
+}
+.head-logo-14{
+    margin-left: 0px;
+
 }
 
 .sl{
@@ -468,6 +502,7 @@ span.hit-count {
     float:right;
 }
 .abt{
+
     background:#E6F1F5;
     margin-top:8px;
 }
@@ -476,6 +511,12 @@ span.hit-count {
     background:#E6F1F5;
     margin-top:10px;
     margin-bottom:10px;
+
+
+}
+.abt-15{
+       margin-top:0px;
+
 }
 .abt h4{
     font-family: 'DroidSans';
@@ -484,10 +525,26 @@ span.hit-count {
 
     margin-left:5px;
 }
-.abt_cont{
-    background:#B8D3DE;
-
+.abt-cont-16 p{
+    padding:0px;
+        color:#5D6164;
+    font-family: 'DroidSans';
+    font-size:16px;
 }
+.abt-cont-16 h4{
+    padding:0px;
+    margin-top:10px;
+    font-family: 'DroidSans';
+    font-size:17px;
+    font-weight:bold;
+      color:#5D6164;
+}
+.abt-cont-17 h4{
+  
+    font-size:15px;
+   
+}
+
 .abt_cont p{
     color:#5D6164;
     font-family: 'DroidSans';
@@ -495,6 +552,12 @@ span.hit-count {
     padding:10px;
 }
 
+}
+.abt-cont-20 p{
+    padding:0px;
+    margin-top:10px;
+    
+}
 .user-img{
     margin-top:10px;
     height:140px;
@@ -528,6 +591,11 @@ span.hit-count {
     color:#3285B4;
     padding:4px;
 	border: 4px solid #E0E0E2;
+
+    font-size:11px;
+    color:#3E3E3E;
+
+
 }
 
 .tri , .tri_2 {
@@ -559,6 +627,33 @@ span.hit-count {
     font-size: 13px;
     margin-top: 8px;
     padding-right: 12px;
+}
+
+
+}
+.head_text p{
+    font-family: 'DroidSans';
+    font-size:18px;
+    color:#3E3D3D;
+    padding:4px;
+
+}
+.head_text-14 h5{
+    font-family: 'DroidSans';
+    font-size:13px;
+    color:#3E3D3D;
+    padding:4px;
+    margin:0px;
+
+}
+.head_text-14 p{
+    font-family: 'DroidSans';
+    font-size:8px;
+    color:#3E3D3D;
+    padding:4px;
+    margin:0px;
+    font-weight: bold;
+
 }
 
 .abt_icon{
@@ -604,6 +699,18 @@ h4.sub-head{
     padding:2px;
     font-size:15px;
     font-weight:normal;
+
+    font-size:17px;
+    font-weight:normal;
+}
+h4.sub-head-14{
+    font-family: 'DroidSans';
+    color:#328DBD;
+    padding:2px;
+    font-size:20px;
+    font-weight:normal;
+    text-transform: uppercase;
+
 }
 .cur_name p{
     font-family: 'DroidSans';
@@ -619,8 +726,13 @@ p.cur-sec-para{
 
 }
 .nopadding {
+
     padding: 0 !important;
     margin: 0 !important;
+
+   padding: 0 !important;
+   margin: 0 !important;
+
 }
 .cur_cont{
     background:#B8D3DE;
@@ -628,9 +740,21 @@ p.cur-sec-para{
 }
 .hr-cur{
     margin-top: 9px;
+
     margin-bottom: 10px;
     border: 0;
     border-top: 1px solid #BFBFC1;
+
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #BFBFC1;
+}
+.hr-cur-14{
+    margin-top: 1px;
+  margin-bottom: 2px;
+  border: 0;
+  border-top: 1px solid #BFBFC1;
+
 }
 .hr_2{
     color:#5D6164!important;
@@ -639,6 +763,8 @@ p.cur-sec-para{
     font-family: 'DroidSans';
     color:#5D6164;
 
+
+
     font-size:13px;
 }
 .mb{
@@ -646,11 +772,11 @@ p.cur-sec-para{
 }
 .fa{
     background:#E6F1F5;
-
-
+    border-radius: 3px;
 }
-.liimg1{
+.liimg1-full-bor{
     background:#E4EEF0;
+
     border-right:solid 2px #328EBB;
     padding:9px;
 }
@@ -662,18 +788,65 @@ p.cur-sec-para{
 .span-count{
     margin-left: -26px;
     font-size: 15px;
+
+
+    padding:9px;
+
 }
+.liimg1-full-bor-last{
+    background:#E4EEF0;
+    border-top:solid 1px #328EBB;
+      border-bottom:solid 1px #328EBB;
+    padding:9px;
+
+
+}
+.liimg1{
+    background:#E4EEF0;
+    border-right:solid 2px #328EBB;
+    border-top:solid 2px #328EBB;
+     border-bottom:none;
+    padding:3px;
+}
+.liimg-last{
+    background:#E4EEF0;
+       border-top:solid 2px #328EBB;
+    padding:3px;
+    
+}
+.li-social{
+    border:solid 1px #79B6D3;
+    margin-top:10px;
+    margin-bottom:10px;
+  
+}
+.li-social a{
+   color:#434955;
+    font-size:9px;
+     font-family: 'DroidSans';
+     background:none!important;
+     text-decoration:none;
+}
+}
+i.fa-nobg{
+     background:none!important;
+     color:#3189B9!important;
+}
+.span-count{
+margin-left: -26px;
+  font-size: 15px;
+  }
 .fa p{
     font-family: 'DroidSans';
-    color:#5D6164;
-
-    font-size:18px;
+    color: rgb(62, 62, 62);
+    padding:14px;
+    font-size:15px;
 }
 .fa h4{
     font-family: 'DroidSans';
     color:#5D6164;
 
-    font-size:18px;
+    font-size:16px;
 
 }
 .pd{
@@ -714,6 +887,7 @@ p.cur-sec-para{
 }
 .cur-post{
     background: #328EBD;
+
     color: #ffffff;
     border: none;
     font-family: 'DroidSans';
@@ -723,6 +897,7 @@ p.cur-sec-para{
     text-shadow: none;
     width: 65px;
     box-shadow: 1px 2px 0px #888888;
+
 }
 
 .bor_less_sub_2{
@@ -757,7 +932,7 @@ p.cur-sec-para{
 }
 .radio label , .checkbox label{
     color:#626E7A;
-    font-size:10px;
+    font-size:14px;
     font-family: 'DroidSans';
     text-transform:none!important ;
 }
@@ -768,11 +943,19 @@ p.cur-sec-para{
     padding: 10px;
     pointer-events: none;
 }
-.nor_label{
-    color:#626E7A;
-    font-size:12px;
-    font-family: 'DroidSans';
-    text-transform:none!important ;
+.nor_label-1{
+    color: #626E7A;
+  font-size: 22px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+  font-weight: normal
+}
+.nor_label-2{
+    color: #626E7A;
+  font-size:15px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+  font-weight: normal
 }
 
 /* align glyph */
@@ -790,7 +973,7 @@ p.cur-sec-para{
 }
 .red_label{
     color:#F42134;
-    font-size:10px;
+    font-size:12px;
 }
 .input-group-addon {
     background:#E6F1F5;
@@ -800,9 +983,13 @@ h4{
     margin-bottom: 6px;
 }
 .top_label{
-    padding-top: 12px;
+    padding-top: 0px;
     font-weight:bold;
 
+}
+.bottom-label{
+    padding-top:10px;
+    padding-bottom:10px;
 }
 .back_2{
     background: #E4EDF2;
@@ -823,8 +1010,7 @@ h4{
 .lab_top_inactive{
     font-family: 'DroidSans';
     color:#3285B4;
-    /*background:#C1DCE7;*/
-    background:#E6F1F5;
+    background:#C1DCE7;
     text-transform: uppercase;
     padding: 5px;
     font-size: 12px;
@@ -865,7 +1051,8 @@ h4{
     font-family: 'DroidSans';
 	color: #434A54;
 	font-size: 24px;
-	margin: 0px 20px 10px 10px;
+	  margin: 6px 0px -38px -3px;
+    /*margin: 0px 20px 10px 10px;*/
 	line-height: 100%;
 	position:relative;
 }
@@ -877,6 +1064,10 @@ h4{
 	margin: 0px 20px 10px 10px;
 	line-height: 100%;
 	position:relative;
+}
+.page-outer-div{
+    margin-top:-10px;
+
 }
 #page-notification-1   .span_desc_dull,
 #page-notification-2 .span_desc_dull{
@@ -914,6 +1105,7 @@ h4{
 }
 .abt_cont_30{
     background:#B8D3DE;
+      padding: 11px;
 }
 .span_desc_dull{
     padding-bottom: 6px;
@@ -942,6 +1134,9 @@ p.foot{
     font-weight:bold;
     background:#B8D3DE;
 
+}
+.abt-slide{
+    margin-top:0px;
 }
 .slide_28 {
     margin-top: 0px;
@@ -1116,15 +1311,74 @@ p.foot{
     width:38%;
 }
 
-::-webkit-input-placeholder { color:#9A9EA1;font-family: 'DroidSans'; }
-::-moz-placeholder { color:#9A9EA1;font-family: 'DroidSans';  } /* firefox 19+ */
-:-ms-input-placeholder { color:#9A9EA1;font-family: 'DroidSans';  } /* ie */
-input:-moz-placeholder { color:#9A9EA1;font-family: 'DroidSans';  }
+.memorial-yg{
+    margin-left: 3px;
+}
+.memorial-yg-right{
+    margin-left: 11px;
+}
+.memorial-h4 h4{
+    font-family: 'DroidSans';
+    color:#5D6164;
+    font-size:13px;
 
-::-webkit-input-placeholder { color:#7EB4CD;font-family: 'DroidSans'; }
-::-moz-placeholder { color:#7EB4CD;font-family: 'DroidSans';  } /* firefox 19+ */
-:-ms-input-placeholder { color:#7EB4CD;font-family: 'DroidSans';  } /* ie */
-input:-moz-placeholder { color:#7EB4CD;font-family: 'DroidSans';  }
+}
+.memorial-h4 p{
+    font-family: 'DroidSans';
+    color:#5D6164;
+    font-size:7px;
+    padding:0px;
+
+}
+.feedback-button{
+    background: #328EBD;
+  color: #ffffff;
+  border: none;
+  font-family: 'DroidSans';
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 17px;
+  text-shadow: none;
+  width: 80px;
+}
+label.form-label{
+    color: #626E7A;
+  font-size: 15px;
+  font-family: 'DroidSans';
+  text-transform: uppercase;
+}
+.glyph-margin{
+    margin-left:15px;
+}
+.add-more{
+    margin-top:9px;
+}
+.form-margin-top{
+   margin-top: -14px;
+}
+.first-form{
+    margin-top:10px;
+}
+label{
+    margin-bottom: 0px!important
+}
+.form-margin-top-2{
+    margin-top:-24px;
+}
+.form-margin-btm{
+      margin-bottom: 25px;
+      border-radius:12px;
+}
+label.label-uppercase{
+    text-transform: uppercase
+}
+.back-text{
+    color:#9A9EA1
+}
+::-webkit-input-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; }
+::-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  } /* firefox 19+ */
+:-ms-input-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  } /* ie */
+input:-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  }
 
 
 
