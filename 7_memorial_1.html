@@ -1,106 +1,88 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OP</title>
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <script src="lib/jquery/1.11.2/jquery.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-</head>
-<body class="body_p" id="page_Memorial">
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-xs-12  head">
-                <div class="col-xs-1 col-sm-1 logo">  </div>
-                <div class="col-xs-10 col-sm-10"><img src="images/logo_obitopedia.jpg"></div>
-            <div class="col-xs-1 col-sm-1 logo">  </div>
-        </div>
-    </div> <!--row end -->
-    <div class="row">
-            <div class="col-sm-12 col-xs-12 slide">
-            <img src="images/slide.png" alt="Photo" class="img-responsive img_p">
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>OP</title>
+        <link href="lib/owl/owl.carousel.css" rel="stylesheet" media="screen">
 
-    </div> <!-- row end -->
-    <div class="row">
-        <div class="col-sm-11 col-xs-11  Pmargin" align="center">
-            <img src="images/mem.png" alt="Photo" class="img-responsive img-circle text-center circle_img" >
-        </div>
-        <div>
-            <img src="images/dropdown.png" alt="Photo" class="img-responsive pull-right pul_margleft" >
-        </div>
-    </div> <!-- row end -->
-    <div class="row">
-        <div class="col-sm-12 col-xs-12 " >
-        <div class="col-sm-1 col-xs-2 left_arrow pull-left" align="center">
-        </div>
-        <div class="col-sm-10 col-xs-8" align="center">
-            <h3 class="mercy_font">MERCY DECKER</h3></div>
-        <div class="col-sm-1 col-xs-2  right_arrow pull-right" align="center">
-        </div>
-        </div>
-    </div> <!-- row end -->
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
 
+        <link rel="stylesheet" href="css/style.css">
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script src="lib/jquery/1.11.2/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/owl/owl.carousel.js"></script>
+    </head>
+    <body id="page-memorial">
+        <div class="page-container">
+            <div class="head_28">
+                <div class="head text-center">
+                    <span class="logo">  </span>
+                    <img src="images/logo_obitopedia.jpg">
+                </div>
+            </div>
+            <div class="memorial-slider owl_item">
+                <figure class="memorial-item-header">
+                    <img src="images/left_1.png" class="top-image left_1img">
+                    <img src="images/left_down.png" class="thumb-image">
+                    <figcaption>
+                        <h4 class="text-center memorial-caption">ODESSA V.MORRIS</h4>
+                        <p class="text-justify memorial-description">
+                            "Everyone must leave something behind when dies,my grandfather said. A child or a book or a painting or a house or a wall built or a pair of made"
+                        </p>
+                    </figcaption>
+                </figure>
+                <div class="share-memorial">
+                    SHARE THIS MEMORIAL
+                    <a href="#"><i class="fa fa-facebook "></i></a>
+                    <a href="#"><i class="fa fa-twitter "></i></a>
+                </div>
+                <div class="row curated-by">
+                    <div class="col-sm-3 col-xs-3 curated-by-caption">
+                        CURATED BY
+                    </div>
+                    <div class="col-sm-4 col-xs-4 curated-by-divider">
+                        <img src="images/curated_by.jpg"> Maddy Crowell
+                    </div>
+                    <div class="col-sm-4 col-xs-4 ">
+                        <img src="images/user.png"> Dummy Name
+                    </div>
+                    <div class="col-sm-1 col-xs-1 curated-arrow">
+                        <img src="images/nxt_img.png">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-4 liimg">
+                    <img src="images/li1.png" class="img-responsive">
+                    <span class="hit-count">0</span>
+                </div>
+                <div class="col-sm-4 col-xs-4 liimg">
+                    <img src="images/li2.png" class="img-responsive">
+                    <span class="hit-count">5</span>
+                </div>
+                <div class="col-sm-4 col-xs-4 liimg">
+                    <img src="images/li3.png" class="img-responsive">
+                    <span class="hit-count">8</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            /*$(document).ready(function(){
+             $(".memorial-slider").owlCarousel({
+             navigation : true,
+             //currentItem : no,
+             //afterAction : afterAction
+             });
+             $('.owl-item').css("width","375px");
+             $('.owl_item').width(($(".row").width()/2)-30)
 
-    <div class="row">
-        <div class="col-sm-1 col-xs-1 " align="center">
-        </div>
-        <div class="col-sm-10 col-xs-10  " >
-            <h4 class="text-justify font-fam">  Born in 1991 Mercy Anastia Decker was the youngest of six, She liked her middle name More than her first name and always signed emails in bright colors and wobbly fonts "Mercy Anastasia." Her family house was large and </h4>
-        </div>
-        <div class="col-sm-1 col-xs-1 " align="center">
-        </div>
-    </div> <!-- row end -->
-    <div class="row share_p">
-        <div class="col-sm-12 col-xs-12 forecolor" align="center" >
-            <a calss="size_p" href=# >Share this Memorial</a> <i class="fa fa-twitter padding_p"></i><i class="fa fa-facebook"></i>
-            </ul>
-        </div>
-        </div>
-    </div> <!-- row end -->
-    <div class="row ">
-        <div class="col-sm-1 col-xs-1 curator_main">
-        </div>
-        <div class="col-sm-1 col-xs-2 curator_opa">
-            <h4 class="text-center curator_opa1">Currated By</h4>
-
-        </div>
-        <div class="col-sm-2 col-xs-2 pull-left curator img-responsive">
-
-        </div>
-        <div class=" col-sm-2 col-xs-2 curator_main share_p">
-            <h5>Maddy Crowel</h5>
-        </div>
-        <div class=" col-sm-3 col-xs-2 pull-left curator_2 img-responsive">
-        </div>
-        <div class=" col-sm-2 col-xs-2 curator_main ">
-         <h5>   Dummy Name </h5>
-        </div>
-        <div class=" col-sm-1 col-xs-1">
-            <img src="images/nxt%20(2).png" class="curator_main1 img-responsive pull-right">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4 col-xs-4 btm_img_2 btm_img" >
-            <img src="images/li1.png" class="img-responsive btm_mar">
-        </div>
-        <div class="col-sm-4 col-xs-4 btm_img_2 btm_img" >
-            <img src="images/li2.png" class="img-responsive btm_mar">
-        </div>
-        <div class="col-sm-4 col-xs-4 btm_img_2" >
-            <img src="images/li3.png" class="img-responsive btm_mar" >
-        </div>
-
-    </div>
-</div><!--container end -->
-</body>
-
+             })*/
+        </script>
+    </body>
 </html>
