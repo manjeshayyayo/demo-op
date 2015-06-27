@@ -247,6 +247,10 @@ input:-moz-placeholder { color:#000!important;font-family: 'DroidSans'; font-wei
 #page-notification-2 .header-one {
 	margin-bottom:15px;
 }
+#page-searchpage-curator-2 {
+    background:#368CB4;
+}
+
 
 .bor{
     border:solid 1px #ffffff;
@@ -413,7 +417,7 @@ span.hit-count {
     border-radius: 78px;
 }
 .head{
-    background: #328EBD;
+    background: #2784AF;
     padding: 10px;
     color: #ffffff;
     border-bottom-left-radius: 5px;
@@ -819,7 +823,8 @@ h4{
 .lab_top_inactive{
     font-family: 'DroidSans';
     color:#3285B4;
-    background:#C1DCE7;
+    /*background:#C1DCE7;*/
+    background:#E6F1F5;
     text-transform: uppercase;
     padding: 5px;
     font-size: 12px;
@@ -1115,6 +1120,11 @@ p.foot{
 ::-moz-placeholder { color:#9A9EA1;font-family: 'DroidSans';  } /* firefox 19+ */
 :-ms-input-placeholder { color:#9A9EA1;font-family: 'DroidSans';  } /* ie */
 input:-moz-placeholder { color:#9A9EA1;font-family: 'DroidSans';  }
+
+::-webkit-input-placeholder { color:#7EB4CD;font-family: 'DroidSans'; }
+::-moz-placeholder { color:#7EB4CD;font-family: 'DroidSans';  } /* firefox 19+ */
+:-ms-input-placeholder { color:#7EB4CD;font-family: 'DroidSans';  } /* ie */
+input:-moz-placeholder { color:#7EB4CD;font-family: 'DroidSans';  }
 
 
 
