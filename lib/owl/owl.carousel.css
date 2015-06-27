@@ -1,0 +1,141 @@
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 760px;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+.nxt-img{
+	float: right; 
+	padding-left: 5px;
+	font-size:30px;
+	color: #A4ACAF;
+	margin-right: 15px;
+}
+.nxt-img:hover {
+	cursor: pointer;
+}
+
+.prev-img{
+	float: left; 
+	padding-left: 5px;
+	font-size:30px;
+	color: #A4ACAF;
+	margin-left: 15px;
+}
+.prev-img:hover {
+	cursor: pointer;
+}
+
+/*
+.nxt-img{
+	float: right; 
+	background: url('../images/lt-arrow.png') no-repeat; 
+	width: 27px; 
+	height:33px;
+	margin-right: 15px;
+	padding-left: 5px;
+	cursor: pointer;
+	background-color: #d3d3d3;
+	border-radius: 3px;
+	box-shadow: 2px 3px 0px rgba(55,63,74,1);
+}
+.nxt-img:hover {
+	background-color: #3197c6;
+}
+.nxt-img:active{
+	margin-top: 3px;
+    width: 27px; 
+	height:30px;
+}
+
+.prev-img{
+	float: right; 
+	background: url('../images/rt-arrow.png') no-repeat ; 
+	width: 27px; 
+	height:33px;
+	padding-left: 5px;
+	cursor: pointer;
+	background-color: #d3d3d3;
+	border-radius: 3px;
+	box-shadow: 2px 3px 0px rgba(55,63,74,1);
+}
+.prev-img:hover {
+	background-color: #3197c6;
+}
+
+.prev-img:active{
+	margin-top: 3px;
+    width: 27px; 
+	height:30px;
+}
+*/
+
+@media (max-width: 750px){
+	
+	.owl-carousel {width: 650px;}
+}
