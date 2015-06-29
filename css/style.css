@@ -266,6 +266,40 @@ a.list-group-custom {
     color: #fff !important;
 }
 
+
+/* page 27 */
+.header-background{
+    background-color: #3e8db8;
+    padding-bottom: 10px;
+}
+
+.header-message{
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.bckSecondMsg{
+    background-color: #3185b4;
+    color: #ffffff;
+}
+
+.user-container{
+    margin: 10px;
+}
+
+.user-name{
+    color: #3185b4;
+    font-weight: bolder;
+}
+
+.user-detail{
+    color: #686765;
+}
+
+.user-record{
+    color: #3185b4;
+    font-weight: bold;
+}
 /*.mask{
     position: absolute;
     top: 80px;
@@ -639,7 +673,7 @@ span.hit-count {
 }
 
 .head {
-    background: #328EBD;
+    background: #3185b4;
 
     padding: 10px;
     color: #ffffff;
@@ -1772,14 +1806,6 @@ commented out for removal waiting for comments
     border-width: 1px;
 }
 
-.head {
-    padding: 10px;
-    background: #328EBD;
-    color: #ffffff;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-}
-
 .text-center {
     text-align: center;
 
@@ -1794,8 +1820,8 @@ commented out for removal waiting for comments
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right:-10px !important;
+    margin-left: -10px !important;
 }
 
 .slide {
