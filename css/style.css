@@ -98,6 +98,78 @@ input:-moz-placeholder { font-family: 'DroidSans'; font-weight:bold }
 
 }
 
+#menu-toggle{
+    float: left;
+    margin-top: 5px;
+}
+
+.img-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.list-group-custom{
+    background-color: #328ebd !important;
+    border-top: 1px solid #ddd !important;
+    border-bottom: 1px solid #ddd !important;
+    border-left: 1px solid #328ebd !important;
+    border-right: 1px solid #328ebd !important;
+
+
+}
+
+a.list-group-custom {
+    color: #fff !important;
+}
+
+
+/* page 27 */
+.header-background{
+    background-color: #3e8db8;
+    padding-bottom: 10px;
+}
+
+.header-message{
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.bckSecondMsg{
+    background-color: #3185b4;
+    color: #ffffff;
+}
+
+.user-container{
+    margin: 10px;
+}
+
+.user-name{
+    color: #3185b4;
+    font-weight: bolder;
+}
+
+.user-detail{
+    color: #686765;
+}
+
+.user-record{
+    color: #3185b4;
+    font-weight: bold;
+}
+/*.mask{
+    position: absolute;
+    top: 80px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 90;
+    opacity: 0.5;
+    display: block;
+    background-color: rgb(0, 0, 0);
+}*/
+
+/*End*/
+
 .head div {
     text-align:center;
 }
