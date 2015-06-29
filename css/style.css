@@ -210,12 +210,6 @@ input:-moz-placeholder { color:#B8BDC1!important;font-family: 'DroidSans'; font-
 #page-main-background-3{
    background:#B4D0DC!important;
 }
-#page-main-background-4{
-   background:#B8D3DE!important;
-}
-#page-main-background-5{
-    background:#B8D3DE;
-}
 #page-message-3 .heading{
 	background:#E4EDF2;
 	padding:10px;
@@ -1371,24 +1365,6 @@ label.label-uppercase{
 }
 .back-text{
     color:#9A9EA1
-}
-.curator-26-h4{
-    background:#3185B4!important;
-    color:#fff!important;
-}
-.memorial-26-h4{
-    background:#E4EDF2!important;
-      
-       font-weight:normal;
-}
-.curator-26-h4 h4{
-    color:#fff;
-    font-weight:normal;
-}
-.memorial-form{
-    background:#398AB6;
-    margin-bottom:10px;
-    margin-top:0px;
 }
 ::-webkit-input-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans'; }
 ::-moz-placeholder { color:#9A9EA1;font-size:12px;font-family: 'DroidSans';  } /* firefox 19+ */
