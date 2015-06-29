@@ -375,7 +375,9 @@ a.list-group-custom {
     padding: 25px;
 }
 
-.login-block  input {
+.login-block  input[type="text"], 
+.login-block  input[type="email"], 
+.login-block  input[type="password"] {
     background: #DEECF5;
     color: #70706F;
     font-family: 'DroidSans';
@@ -427,20 +429,15 @@ hr{
     color:white;
     border-top: 3px solid #eee;
 }
-.check_cont label{
-    color:#ffffff;
-    font-family: 'DroidSans';
-    font-size:14px;
-    margin-right:10px;
+
+.remember-me-block {
+	padding:15px;
 }
-.check_cont{
-    border:none!important;
-    padding:10px!important;
-}
-.check_cont span{
-    color:#328EBD;
+
+.remember-me{
+    color:#fff;
     font-family: 'DroidSans';
-    font-size:14px;
+    font-size:20px;
     margin-left: 10px;
 }
 .mar_bottom{
