@@ -563,12 +563,12 @@ hr {
     padding: 25px;
 }
 
-.left_1img {
+.left-1img {
     border-top-left-radius: 8px;
     width: 100%
 }
 
-.left_2img {
+.left-2img {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     width: 100%
@@ -594,7 +594,7 @@ span.hit-count {
     border-right: 0px;
 }
 
-.top_mar {
+.top-mar {
     margin-top: -32px;
     border-radius: 78px;
 }
@@ -1226,7 +1226,7 @@ h4 {
     border-radius: 5px;
 }
 
-.lab_top_active {
+.lab-top-active {
     font-family: 'DroidSans';
     color:#FEFEFE;
     background: #328EBD;
@@ -1961,7 +1961,7 @@ commented out for removal waiting for comments
 .row-header-color
 {
     background: #E4EDF2;
-    padding: 0px 0px 0px;
+    padding: 3px 0px 3px;
     width: 100%
 }
 .text-color
@@ -1971,18 +1971,16 @@ commented out for removal waiting for comments
 }
 .textbox-height
 {
-    height: 60px;
+    height: 55px;
     font-size: 10px;
-    font-weight:900 ;
-
-    font-size-adjust: 20px;
+    margin: 0px;
 }
-.img-width
+.left-2img
 {
-    width: 51%;
+    width: 100%;
+    border-top-left-radius: 8px;
 }
-.text-proper-alighn
+.search-header-margin
 {
-    padding: 6px;
-    margin: -1px;
+    margin: 0px;
 }
